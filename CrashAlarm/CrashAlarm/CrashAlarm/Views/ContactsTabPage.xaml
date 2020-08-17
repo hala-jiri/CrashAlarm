@@ -11,6 +11,19 @@
         <Entry x:Name="NameEntry" Placeholder="Enter Name" />
         <Entry x:Name="NumberEntry" Placeholder="Enter contact number" />
 
+        <Picker x:Name="pickerTypeOfContact"
+                Title="Type of contact">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>No specific</x:String>
+                    <x:String>Emergency</x:String>
+                    <x:String>Family</x:String>
+                    <x:String>Friend</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+
         <Button Text="Add to Database" Clicked="OnButtonClicked" />
         <ListView x:Name="listView">
             <ListView.ItemTemplate>

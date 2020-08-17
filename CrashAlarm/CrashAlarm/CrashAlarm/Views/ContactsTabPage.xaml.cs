@@ -20,11 +20,17 @@ namespace CrashAlarm.Views
         {
             if (!string.IsNullOrWhiteSpace(NameEntry.Text) && !string.IsNullOrWhiteSpace(NumberEntry.Text))
             {
+                int selectedTypeIndex;
+                if (pickerTypeOfContact.SelectedIndex == -1)
+                    selectedTypeIndex = 0;
+                else
+                    selectedTypeIndex = pickerTypeOfContact.SelectedIndex;
+
                 await App.DbRepository.SaveContactAsync(new Contact
                 {
                     ContactName = NameEntry.Text,
                     ContactNumber = NumberEntry.Text,
-                    TypeOfContact = "Friend"
+                    TypeOfContact = pickerTypeOfContact.ItemsSource[selectedTypeIndex].ToString()
                 });
 
                 NameEntry.Text = NumberEntry.Text = string.Empty;
