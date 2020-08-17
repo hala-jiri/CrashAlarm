@@ -106,6 +106,15 @@ namespace CrashAlarm.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Contacts.
+        /// </summary>
+        internal static string ContactsTabTitle {
+            get {
+                return ResourceManager.GetString("ContactsTabTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to High.
         /// </summary>
         internal static string High {

@@ -5,7 +5,7 @@
              xmlns:resources="clr-namespace:CrashAlarm.Resources;assembly=CrashAlarm"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="CrashAlarm.Views.ContactsTabPage"
-             Title="{x:Static resources:AppResource.CleanHistory}">
+             Title="{x:Static resources:AppResource.ContactsTabTitle}">
     <StackLayout Margin="20,35,20,20">
 
         <Entry x:Name="NameEntry" Placeholder="Enter Name" />

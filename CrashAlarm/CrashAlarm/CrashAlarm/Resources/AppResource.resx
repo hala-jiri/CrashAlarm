@@ -132,6 +132,9 @@
   <data name="CleanHistory" xml:space="preserve">
     <value>Clean history</value>
   </data>
+  <data name="ContactsTabTitle" xml:space="preserve">
+    <value>Contacts</value>
+  </data>
   <data name="High" xml:space="preserve">
     <value>High</value>
   </data>
