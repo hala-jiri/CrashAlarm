@@ -1,3 +1,5 @@
+using System;
+using System.IO;
 using Prism;
 using Prism.Ioc;
 using CrashAlarm.ViewModels;
@@ -10,6 +12,19 @@ namespace CrashAlarm
 {
     public partial class App
     {
+        private static DbRepository _db;
+
+        public static DbRepository DbRepository
+        {
+            get
+            {
+                if(_db == null)
+                    _db = new DbRepository(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"CrashAlarm.db3"));
+                return _db;
+            }
+        }
+        
+
         public App(IPlatformInitializer initializer)
             : base(initializer)
         {
