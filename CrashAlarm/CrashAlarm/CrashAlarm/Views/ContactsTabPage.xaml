@@ -2,8 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="http://prismlibrary.com"
+             xmlns:resources="clr-namespace:CrashAlarm.Resources;assembly=CrashAlarm"
              prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="CrashAlarm.Views.ContactsTabPage">
+             x:Class="CrashAlarm.Views.ContactsTabPage"
+             Title="{x:Static resources:AppResource.CleanHistory}">
     <StackLayout Margin="20,35,20,20">
 
         <Entry x:Name="NameEntry" Placeholder="Enter Name" />
@@ -13,8 +15,8 @@
         <ListView x:Name="listView">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding Name}"
-                              Detail="{Binding Age}" />
+                    <TextCell Text="{Binding ContactName}"
+                              Detail="{Binding ContactNumber}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

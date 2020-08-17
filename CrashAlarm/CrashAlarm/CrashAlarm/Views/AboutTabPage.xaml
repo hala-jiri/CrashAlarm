@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="http://prismlibrary.com"
+             xmlns:resources="clr-namespace:CrashAlarm.Resources;assembly=CrashAlarm"
              prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="CrashAlarm.Views.AboutTabPage">
+             x:Class="CrashAlarm.Views.AboutTabPage"
+             Title="{x:Static resources:AppResource.AboutTabTitle}">
   
 </ContentPage>
