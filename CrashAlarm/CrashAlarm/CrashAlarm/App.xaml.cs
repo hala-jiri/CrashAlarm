@@ -28,6 +28,11 @@ namespace CrashAlarm
 
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<MainTabbedPage, MainTabbedPageViewModel>();
+            containerRegistry.RegisterForNavigation<SettingsTabPage, SettingsTabPageViewModel>();
+            containerRegistry.RegisterForNavigation<MainTabPage, MainTabPageViewModel>();
+            containerRegistry.RegisterForNavigation<HistoryTabPage, HistoryTabPageViewModel>();
+            containerRegistry.RegisterForNavigation<AboutTabPage, AboutTabPageViewModel>();
         }
     }
 }
