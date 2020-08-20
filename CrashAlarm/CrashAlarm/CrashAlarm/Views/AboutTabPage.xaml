@@ -7,4 +7,9 @@
              x:Class="CrashAlarm.Views.AboutTabPage"
              Title="{x:Static resources:AppResource.AboutTabTitle}">
   
+    <StackLayout>
+        <Label TextColor="Black" FontSize="Header" Text="{x:Static resources:AppResource.CrashAlarmTitleInAbout}"/>
+        <Label TextColor="Black" FontSize="Default" Text="{x:Static resources:AppResource.CrashAlarmBodyInAbout}"/>
+
+    </StackLayout>
 </ContentPage>
