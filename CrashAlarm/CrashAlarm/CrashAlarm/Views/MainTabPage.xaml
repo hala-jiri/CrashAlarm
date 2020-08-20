@@ -6,5 +6,36 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="CrashAlarm.Views.MainTabPage"
              Title="{x:Static resources:AppResource.MainTabTitle}">
-  
+
+
+    <Grid Padding="10,10,10,10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="5*" />
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
+                Text="Help"  WidthRequest="40" HeightRequest="40" CornerRadius="20"
+                Clicked="clickedOnHelpButton"/>
+
+        <Label Grid.Row="1" Grid.Column="0" Padding="0,20,0,0" HorizontalOptions="End"  Text="Your location:"/>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+            <Label Text="{x:Static resources:AppResource.Latitude}" Padding="0,0,10,0" HorizontalOptions="End"/>
+            <Label x:Name="latLabel"/>
+        </StackLayout>
+
+        <StackLayout  Orientation="Horizontal" HorizontalOptions="Center" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+            <Label Text="{x:Static resources:AppResource.Longitude}" Padding="0,0,10,0" HorizontalOptions="End"/>
+            <Label x:Name="longLabel"/>
+        </StackLayout>
+
+    </Grid>
 </ContentPage>
