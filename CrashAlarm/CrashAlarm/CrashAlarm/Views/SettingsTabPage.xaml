@@ -3,8 +3,63 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="http://prismlibrary.com"
              xmlns:resources="clr-namespace:CrashAlarm.Resources;assembly=CrashAlarm"
+             xmlns:viewModels="clr-namespace:CrashAlarm.ViewModels;assembly=CrashAlarm"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="CrashAlarm.Views.SettingsTabPage"
              Title="{x:Static resources:AppResource.SettingsTabTitle}">
-  
+
+    <Grid Padding="10,10,10,10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="120" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="5*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.BindingContext>
+            <viewModels:SettingsTabPageViewModel />
+        </Grid.BindingContext>
+
+        <Label Grid.Column="0" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="End" Padding="0,0,10,0" Text="Alert to family" FontSize="Small" TextColor="Black" />
+        <Switch Grid.Column="1" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Start" x:Name="SwitchFamilyNotification" 
+                />
+
+        <Label Grid.Column="0" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="End" Padding="0,0,10,0" Text="Alert to friends" FontSize="Small" TextColor="Black"></Label>
+        <Switch Grid.Column="1" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Start" x:Name="SwitchFriendsNotification" 
+                IsToggled="{Binding Settings.GSMNotificationToFriends, Mode=TwoWay}"/>
+
+        <Label Grid.Column="0" Grid.Row="2"  VerticalOptions="Center" HorizontalOptions="End" Padding="0,0,10,0" Text="Alert to emergency" FontSize="Small" TextColor="Black"></Label>
+        <Switch Grid.Column="1" Grid.Row="2" VerticalOptions="Center" HorizontalOptions="Start" x:Name="SwitchEmergencyNotification" 
+                IsToggled="{Binding Settings.GSMNotificationToEmergency, Mode=TwoWay}"/>
+
+        <Editor Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" HeightRequest="100" WidthRequest="300" VerticalOptions="Center" HorizontalOptions="Center" 
+               TextColor="Black"  
+               Placeholder="Enter your message for help"
+               Text="{Binding Settings.Units}" />
+
+        <Label Grid.Column="1" Grid.Row="3"  VerticalOptions="Center" HorizontalOptions="End" Padding="0,0,10,0" 
+               Text="{Binding TextToShow}" 
+               FontSize="Medium" TextColor="Black"/>
+
+        <Switch Grid.Column="0" Grid.Row="4" VerticalOptions="Center" HorizontalOptions="Start" x:Name="Switch1" 
+                IsToggled="{Binding SwitchMessageTofriends, Mode=TwoWay}"/>
+
+</Grid>
+    <!--<StackLayout Padding="10">
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+            <
+            
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+           
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+            
+        </StackLayout>
+    </StackLayout>-->
 </ContentPage>

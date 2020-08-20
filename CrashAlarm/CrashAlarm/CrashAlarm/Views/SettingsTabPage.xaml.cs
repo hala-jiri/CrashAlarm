@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace CrashAlarm.Views
 {
@@ -7,6 +8,8 @@ namespace CrashAlarm.Views
         public SettingsTabPage()
         {
             InitializeComponent();
+            
         }
+
     }
 }
