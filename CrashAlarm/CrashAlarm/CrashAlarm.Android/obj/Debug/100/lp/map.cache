@@ -1,5 +1,7 @@
+ButtonCircle.FormsPlugin.Android
 FormsViewGroup
 Prism.Forms
+SQLitePCLRaw.lib.e_sqlite3.android
 Xamarin.AndroidX.Activity
 Xamarin.AndroidX.Annotation
 Xamarin.AndroidX.AppCompat.AppCompatResources
@@ -80,4 +82,3 @@ androidx.media.media
 androidx.lifecycle.lifecycle-livedata
 androidx.legacy.legacy-support-v4
 androidx.browser.browser
-SQLitePCLRaw.lib.e_sqlite3.android

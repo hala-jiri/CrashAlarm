@@ -14,6 +14,20 @@
           "lib/netstandard2.0/DryIoc.dll": {}
         }
       },
+      "Plugins.Forms.ButtonCircle/2.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.1.0.697729"
+        },
+        "compile": {
+          "lib/MonoAndroid10/ButtonCircle.FormsPlugin.Abstractions.dll": {},
+          "lib/MonoAndroid10/ButtonCircle.FormsPlugin.Android.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/ButtonCircle.FormsPlugin.Abstractions.dll": {},
+          "lib/MonoAndroid10/ButtonCircle.FormsPlugin.Android.dll": {}
+        }
+      },
       "Prism.Core/7.2.0.1422": {
         "type": "package",
         "compile": {
@@ -1058,7 +1072,9 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Plugins.Forms.ButtonCircle": "2.0.3",
           "Prism.DryIoc.Forms": "7.2.0.1422",
+          "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.Essentials.Interfaces": "1.5.3.2",
           "Xamarin.Forms": "4.7.0.1239",
           "sqlite-net-pcl": "1.7.335"
@@ -1100,6 +1116,40 @@
         "lib/portable-net40+sl5+win8+wp8+wpa81/DryIoc.xml",
         "lib/portable-net45+win8+wp8+wpa81/DryIoc.dll",
         "lib/portable-net45+win8+wp8+wpa81/DryIoc.xml"
+      ]
+    },
+    "Plugins.Forms.ButtonCircle/2.0.3": {
+      "sha512": "cbnNLnCAgmjmW3XVxC/f5cGSVIY1WMvK9rrOw/rvFZpnEMAoGPrJbt/fxFRllfw02jbgmujnuekGPalvngybgw==",
+      "type": "package",
+      "path": "plugins.forms.buttoncircle/2.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/MonoAndroid10/Assets/fontawesome.ttf",
+        "content/MonoAndroid10/Assets/materialicons.ttf",
+        "content/UAP10/ButtonCircle.FormsPlugin.UWP/Assets/Fonts/fontawesome.ttf",
+        "content/UAP10/ButtonCircle.FormsPlugin.UWP/Assets/Fonts/materialicons.ttf",
+        "content/Xamarin.iOS10/Resources/fontawesome.ttf",
+        "content/Xamarin.iOS10/Resources/materialicons.ttf",
+        "lib/MonoAndroid10/ButtonCircle.FormsPlugin.Abstractions.dll",
+        "lib/MonoAndroid10/ButtonCircle.FormsPlugin.Abstractions.pdb",
+        "lib/MonoAndroid10/ButtonCircle.FormsPlugin.Android.XML",
+        "lib/MonoAndroid10/ButtonCircle.FormsPlugin.Android.dll",
+        "lib/MonoAndroid10/ButtonCircle.FormsPlugin.Android.pdb",
+        "lib/UAP10/ButtonCircle.FormsPlugin.Abstractions.dll",
+        "lib/UAP10/ButtonCircle.FormsPlugin.Abstractions.pdb",
+        "lib/UAP10/ButtonCircle.FormsPlugin.UWP.XML",
+        "lib/UAP10/ButtonCircle.FormsPlugin.UWP.dll",
+        "lib/Xamarin.iOS10/ButtonCircle.FormsPlugin.Abstractions.dll",
+        "lib/Xamarin.iOS10/ButtonCircle.FormsPlugin.Abstractions.pdb",
+        "lib/Xamarin.iOS10/ButtonCircle.FormsPlugin.iOS.XML",
+        "lib/Xamarin.iOS10/ButtonCircle.FormsPlugin.iOS.dll",
+        "lib/netstandard2.0/ButtonCircle.FormsPlugin.Abstractions.deps.json",
+        "lib/netstandard2.0/ButtonCircle.FormsPlugin.Abstractions.dll",
+        "lib/netstandard2.0/ButtonCircle.FormsPlugin.Abstractions.pdb",
+        "lib/netstandard2.0/ButtonCircle.FormsPlugin.Abstractions.xml",
+        "plugins.forms.buttoncircle.2.0.3.nupkg.sha512",
+        "plugins.forms.buttoncircle.nuspec"
       ]
     },
     "Prism.Core/7.2.0.1422": {
@@ -2482,6 +2532,7 @@
     "MonoAndroid,Version=v10.0": [
       "CrashAlarm >= 1.0.0",
       "Prism.DryIoc.Forms >= 7.2.0.1422",
+      "Xamarin.Essentials >= 1.5.3.2",
       "Xamarin.Essentials.Interfaces >= 1.5.3.2",
       "Xamarin.Forms >= 4.7.0.1239"
     ]
@@ -2513,6 +2564,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://bld04/guestAuth/app/nuget/v1/FeedService.svc/": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2531,6 +2583,10 @@
           "Prism.DryIoc.Forms": {
             "target": "Package",
             "version": "[7.2.0.1422, )"
+          },
+          "Xamarin.Essentials": {
+            "target": "Package",
+            "version": "[1.5.3.2, )"
           },
           "Xamarin.Essentials.Interfaces": {
             "target": "Package",
