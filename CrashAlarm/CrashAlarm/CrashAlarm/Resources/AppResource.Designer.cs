@@ -115,6 +115,24 @@ namespace CrashAlarm.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This application is just little helper for people who had accident, fall down, are lost in nature or anything else. By simple command you can get to know your friends, your family or emergency numbers that something happen with you and provide them your location..
+        /// </summary>
+        internal static string CrashAlarmBodyInAbout {
+            get {
+                return ResourceManager.GetString("CrashAlarmBodyInAbout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Crash Alarm app.
+        /// </summary>
+        internal static string CrashAlarmTitleInAbout {
+            get {
+                return ResourceManager.GetString("CrashAlarmTitleInAbout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to High.
         /// </summary>
         internal static string High {
