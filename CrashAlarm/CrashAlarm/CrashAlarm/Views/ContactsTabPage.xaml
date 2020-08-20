@@ -8,6 +8,30 @@
              Title="{x:Static resources:AppResource.ContactsTabTitle}">
     <StackLayout Margin="20,35,20,20">
 
+        <!--<ListView  x:Name="listViewFirst">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout BackgroundColor="#eee"
+                                 Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding ContactName}"
+                                   TextColor="#f35e20" />
+                                <Label Text="{Binding ContactNumber}"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="#503026" />
+                        </StackLayout>
+                            <Label Text="{Binding TypeOfContact}"
+                               TextColor="#503026" />
+                        </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        </ListView>-->
+
+
+
+
         <Entry x:Name="NameEntry" Placeholder="Enter Name" />
         <Entry x:Name="NumberEntry" Placeholder="Enter contact number" />
 
@@ -28,8 +52,20 @@
         <ListView x:Name="listView">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding ContactName}"
-                              Detail="{Binding ContactNumber}" />
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Text="Delete me!" IsDestructive="True"/>
+                        </ViewCell.ContextActions>
+                        <StackLayout>
+                            <Label Text="{Binding ContactName}" />
+                            <Label Text="{Binding ContactNumber}" />
+                            <Label Text="{Binding TypeOfContact}" TextColor="#503026" />
+                            <Button Text="Remove" Clicked="Remove_Clicked" />
+                        </StackLayout>
+                    </ViewCell>
+                    
+                        <!--<TextCell Text="{Binding ContactName}"
+                              Detail="{Binding ContactNumber}" />-->
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
