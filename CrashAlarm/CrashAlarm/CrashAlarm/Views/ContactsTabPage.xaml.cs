@@ -1,6 +1,7 @@
 ﻿using System;
 using CrashAlarm.Models;
 using CrashAlarm.ViewModels;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace CrashAlarm.Views
@@ -40,19 +41,26 @@ namespace CrashAlarm.Views
                 listView.ItemsSource = await App.DbRepository.GetAllContactsAsync();
             }
         }
-        public void OnDelete(object sender, EventArgs e)
+        public async void OnDelete(object sender, EventArgs e)
         {
             var menuItem = ((MenuItem)sender);
-            //DisplayAlert("Delete Context Action", menuItem.CommandParameter + " delete context action", "OK");
-            var result = App.DbRepository.DeleteContactAsync((Contact)menuItem.BindingContext);
-            
-        }
-        public void Remove_Clicked(object sender, EventArgs e)
-        {
-            var button = sender as Button;
-            var contactItem = button.BindingContext as Contact;
-            var vm = BindingContext as ContactsTabPageViewModel;
-            vm.RemoveCommand.Execute(contactItem);
+            bool confimResult = false;
+         
+            //    bool r = await App.Current.MainPage.DisplayAlert("Delete confirm", "Delete item?", "ok", "cancel");
+           
+
+
+            //Device.BeginInvokeOnMainThread(async()=>
+            //{
+            //    confimResult = await DisplayAlert("Delete confirm", "Delete item?", "ok", "cancel");
+            //    if (confimResult)
+            //    {
+            //        int result = await App.DbRepository.DeleteContactAsync((Contact)menuItem.BindingContext);
+            //    }
+            //});
+            int result = await App.DbRepository.DeleteContactAsync((Contact)menuItem.BindingContext);
+            listView.ItemsSource = await App.DbRepository.GetAllContactsAsync();
+
         }
     }
 
