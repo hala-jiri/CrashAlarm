@@ -120,18 +120,6 @@
   <data name="AboutTabTitle" xml:space="preserve">
     <value>About</value>
   </data>
-  <data name="ActualSpeed" xml:space="preserve">
-    <value>Actual speed</value>
-  </data>
-  <data name="Altitude" xml:space="preserve">
-    <value>Altitude</value>
-  </data>
-  <data name="Best" xml:space="preserve">
-    <value>Best</value>
-  </data>
-  <data name="CleanHistory" xml:space="preserve">
-    <value>Clean history</value>
-  </data>
   <data name="ContactsTabTitle" xml:space="preserve">
     <value>Contacts</value>
   </data>
@@ -140,9 +128,6 @@
   </data>
   <data name="CrashAlarmTitleInAbout" xml:space="preserve">
     <value>Crash Alarm app</value>
-  </data>
-  <data name="High" xml:space="preserve">
-    <value>High</value>
   </data>
   <data name="HistoryTabTitle" xml:space="preserve">
     <value>History</value>
@@ -153,25 +138,10 @@
   <data name="Longitude" xml:space="preserve">
     <value>Longitude</value>
   </data>
-  <data name="Low" xml:space="preserve">
-    <value>Low</value>
-  </data>
-  <data name="Lowest" xml:space="preserve">
-    <value>Lowest</value>
-  </data>
   <data name="MainTabTitle" xml:space="preserve">
     <value>Main</value>
   </data>
-  <data name="Medium" xml:space="preserve">
-    <value>Medium</value>
-  </data>
-  <data name="PrecisionOfGPS" xml:space="preserve">
-    <value>Precision of GPS</value>
-  </data>
   <data name="SettingsTabTitle" xml:space="preserve">
     <value>Settings</value>
-  </data>
-  <data name="Unit" xml:space="preserve">
-    <value>Unit</value>
   </data>
 </root>

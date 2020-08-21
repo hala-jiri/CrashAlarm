@@ -70,42 +70,6 @@ namespace CrashAlarm.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Actual speed.
-        /// </summary>
-        internal static string ActualSpeed {
-            get {
-                return ResourceManager.GetString("ActualSpeed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Altitude.
-        /// </summary>
-        internal static string Altitude {
-            get {
-                return ResourceManager.GetString("Altitude", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Best.
-        /// </summary>
-        internal static string Best {
-            get {
-                return ResourceManager.GetString("Best", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Clean history.
-        /// </summary>
-        internal static string CleanHistory {
-            get {
-                return ResourceManager.GetString("CleanHistory", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Contacts.
         /// </summary>
         internal static string ContactsTabTitle {
@@ -129,15 +93,6 @@ namespace CrashAlarm.Resources {
         internal static string CrashAlarmTitleInAbout {
             get {
                 return ResourceManager.GetString("CrashAlarmTitleInAbout", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to High.
-        /// </summary>
-        internal static string High {
-            get {
-                return ResourceManager.GetString("High", resourceCulture);
             }
         }
         
@@ -169,24 +124,6 @@ namespace CrashAlarm.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Low.
-        /// </summary>
-        internal static string Low {
-            get {
-                return ResourceManager.GetString("Low", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Lowest.
-        /// </summary>
-        internal static string Lowest {
-            get {
-                return ResourceManager.GetString("Lowest", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Main.
         /// </summary>
         internal static string MainTabTitle {
@@ -196,38 +133,11 @@ namespace CrashAlarm.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Medium.
-        /// </summary>
-        internal static string Medium {
-            get {
-                return ResourceManager.GetString("Medium", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Precision of GPS.
-        /// </summary>
-        internal static string PrecisionOfGPS {
-            get {
-                return ResourceManager.GetString("PrecisionOfGPS", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Settings.
         /// </summary>
         internal static string SettingsTabTitle {
             get {
                 return ResourceManager.GetString("SettingsTabTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Unit.
-        /// </summary>
-        internal static string Unit {
-            get {
-                return ResourceManager.GetString("Unit", resourceCulture);
             }
         }
     }

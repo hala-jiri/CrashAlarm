@@ -98,4 +98,31 @@
 	<resheader name="writer">
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
+  <data name="AboutTabTitle" xml:space="preserve">
+    <value>O aplikaci</value>
+  </data>
+  <data name="ContactsTabTitle" xml:space="preserve">
+    <value>Kontakty</value>
+  </data>
+  <data name="MainTabTitle" xml:space="preserve">
+    <value>Hlavní</value>
+  </data>
+  <data name="SettingsTabTitle" xml:space="preserve">
+    <value>Nastavení</value>
+  </data>
+  <data name="Latitude" xml:space="preserve">
+    <value>Zeměpisná šířka</value>
+  </data>
+  <data name="Longitude" xml:space="preserve">
+    <value>Zeměpisná délka</value>
+  </data>
+  <data name="HistoryTabTitle" xml:space="preserve">
+    <value>Historie</value>
+  </data>
+  <data name="CrashAlarmBodyInAbout" xml:space="preserve">
+    <value>Aplikace, která má za úkol být pomoci lidem, kteří měli nehodu, upadli, ztratili se v přírodě či cokoli jiného. Pomocí jednoduchého příkazu tak můžete dát vědět své rodině, přátelům, či záchranným složkám, že se Vám něco stalo a poskytnout informace o vaši pozici.</value>
+  </data>
+  <data name="CrashAlarmTitleInAbout" xml:space="preserve">
+    <value>Crash Alarm app</value>
+  </data>
 </root>
