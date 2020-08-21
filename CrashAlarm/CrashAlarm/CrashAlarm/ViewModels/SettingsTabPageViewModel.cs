@@ -13,35 +13,14 @@ namespace CrashAlarm.ViewModels
     public class SettingsTabPageViewModel : BindableBase
     {
         readonly DbRepository _db;
-       
-        private string textToShow;
-
-        
 
         public SettingsTabPageViewModel()
         {
-            
             _db = new DbRepository();
-            textToShow = _db.GetCountOfSettingsAsync().Result.ToString();
-            IsSwitchedToggled = true;
             //GetAllSettings();
             GetPreferenceSettings();
         }
-
-        public string TextToShow
-        {
-            protected set
-            {
-                if (textToShow != value)
-                {
-                    textToShow = value;
-                    OnPropertyChanged("TextToShow");
-                }
-            }
-            get { return textToShow; }
-        }
-
-
+        
         private Settings settings;
         public Settings Settings
         {
@@ -51,35 +30,12 @@ namespace CrashAlarm.ViewModels
                 if (settings != value)
                 {
                     settings = value;
-                    //OnPropertyChanged(nameof(Settings));
                     RaisePropertyChanged(nameof(Settings));
                     _db.SaveSettingsAsync(settings);
                 }
             }
         }
 
-        private bool _switchMessageTofriends;
-        public bool SwitchMessageTofriends
-        {
-            get { return _switchMessageTofriends; }
-            set
-            {
-                _switchMessageTofriends = value;
-                //OnPropertyChanged(nameof(SwitchMessageTofriends));
-                RaisePropertyChanged(nameof(SwitchMessageTofriends));
-            }
-        }
-
-        private bool _isSwitchToggled = false;
-        public bool IsSwitchedToggled
-        {
-            get { return _isSwitchToggled; }
-            set
-            {
-                _isSwitchToggled = value;
-                OnPropertyChanged(nameof(IsSwitchedToggled));
-            }
-        }
 
         //public async Task GetAllSettings()
         //{
