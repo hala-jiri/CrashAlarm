@@ -1,13 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "8vwvRtmskm5hMA3VzVgOSLTivHha4sAWFb4iWM+RYYbOticZ4V9Td8ZuRd/3WGJEX3cPR2KhfvVscmF+fFMVJA==",
+  "dgSpecHash": "IwFs3fTeiQchm5bJHy5zJmDWkuP07bv04VVkXlj8ifSpLRxQzp6bKZFeHJV7OYH0Mq9RyFDDItoQrrmBflB67A==",
   "success": true,
   "projectFilePath": "C:\\Git\\UHK\\CrashAlarm\\CrashAlarm\\CrashAlarm\\CrashAlarm\\CrashAlarm.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\jhala\\.nuget\\packages\\acr.userdialogs\\7.1.0.446\\acr.userdialogs.7.1.0.446.nupkg.sha512",
     "C:\\Users\\jhala\\.nuget\\packages\\dryioc.dll\\4.0.7\\dryioc.dll.4.0.7.nupkg.sha512",
     "C:\\Users\\jhala\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\jhala\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\jhala\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\jhala\\.nuget\\packages\\plugins.forms.buttoncircle\\2.0.3\\plugins.forms.buttoncircle.2.0.3.nupkg.sha512",
     "C:\\Users\\jhala\\.nuget\\packages\\prism.core\\7.2.0.1422\\prism.core.7.2.0.1422.nupkg.sha512",
     "C:\\Users\\jhala\\.nuget\\packages\\prism.dryioc.forms\\7.2.0.1422\\prism.dryioc.forms.7.2.0.1422.nupkg.sha512",
     "C:\\Users\\jhala\\.nuget\\packages\\prism.forms\\7.2.0.1422\\prism.forms.7.2.0.1422.nupkg.sha512",

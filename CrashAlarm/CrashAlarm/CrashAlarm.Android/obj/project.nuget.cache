@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "yGtxtCoW1czo3pxDRisx6a04mxfBOJo13VkKBPhjKNCX4c9W0UCZY8m74kI92O9wECtqj8NbD4b6EWn6irET5A==",
+  "dgSpecHash": "R8ZwPF6QcYiow+V/G0dJMRX242t6KU4sHYdTXO4qvxW1OULD4iacmNXpaCtfyUAAt4kkwCJocZBDSrQJjjs+CQ==",
   "success": true,
   "projectFilePath": "C:\\Git\\UHK\\CrashAlarm\\CrashAlarm\\CrashAlarm\\CrashAlarm.Android\\CrashAlarm.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\jhala\\.nuget\\packages\\acr.userdialogs\\7.1.0.446\\acr.userdialogs.7.1.0.446.nupkg.sha512",
+    "C:\\Users\\jhala\\.nuget\\packages\\andhud\\1.4.2\\andhud.1.4.2.nupkg.sha512",
     "C:\\Users\\jhala\\.nuget\\packages\\dryioc.dll\\4.0.7\\dryioc.dll.4.0.7.nupkg.sha512",
     "C:\\Users\\jhala\\.nuget\\packages\\plugins.forms.buttoncircle\\2.0.3\\plugins.forms.buttoncircle.2.0.3.nupkg.sha512",
     "C:\\Users\\jhala\\.nuget\\packages\\prism.core\\7.2.0.1422\\prism.core.7.2.0.1422.nupkg.sha512",

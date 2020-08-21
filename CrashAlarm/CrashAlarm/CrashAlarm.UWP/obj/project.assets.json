@@ -2,6 +2,29 @@
   "version": 3,
   "targets": {
     "UAP,Version=v10.0.16299": {
+      "Acr.UserDialogs/7.1.0.446": {
+        "type": "package",
+        "dependencies": {
+          "Coding4Fun.Toolkit.Controls": "2.1.8"
+        },
+        "compile": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        }
+      },
+      "Coding4Fun.Toolkit.Controls/2.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        }
+      },
       "DryIoc.dll/4.0.7": {
         "type": "package",
         "dependencies": {
@@ -249,6 +272,20 @@
         },
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "Plugins.Forms.ButtonCircle/2.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.1.0.697729"
+        },
+        "compile": {
+          "lib/UAP10/ButtonCircle.FormsPlugin.Abstractions.dll": {},
+          "lib/UAP10/ButtonCircle.FormsPlugin.UWP.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/ButtonCircle.FormsPlugin.Abstractions.dll": {},
+          "lib/UAP10/ButtonCircle.FormsPlugin.UWP.dll": {}
         }
       },
       "Prism.Core/7.2.0.1422": {
@@ -724,7 +761,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Acr.UserDialogs": "7.1.0.446",
+          "Plugins.Forms.ButtonCircle": "2.0.3",
           "Prism.DryIoc.Forms": "7.2.0.1422",
+          "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.Essentials.Interfaces": "1.5.3.2",
           "Xamarin.Forms": "4.7.0.1239",
           "sqlite-net-pcl": "1.7.335"
@@ -738,6 +778,29 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-arm": {
+      "Acr.UserDialogs/7.1.0.446": {
+        "type": "package",
+        "dependencies": {
+          "Coding4Fun.Toolkit.Controls": "2.1.8"
+        },
+        "compile": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        }
+      },
+      "Coding4Fun.Toolkit.Controls/2.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        }
+      },
       "DryIoc.dll/4.0.7": {
         "type": "package",
         "dependencies": {
@@ -986,6 +1049,20 @@
         },
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "Plugins.Forms.ButtonCircle/2.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.1.0.697729"
+        },
+        "compile": {
+          "lib/UAP10/ButtonCircle.FormsPlugin.Abstractions.dll": {},
+          "lib/UAP10/ButtonCircle.FormsPlugin.UWP.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/ButtonCircle.FormsPlugin.Abstractions.dll": {},
+          "lib/UAP10/ButtonCircle.FormsPlugin.UWP.dll": {}
         }
       },
       "Prism.Core/7.2.0.1422": {
@@ -1636,7 +1713,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Acr.UserDialogs": "7.1.0.446",
+          "Plugins.Forms.ButtonCircle": "2.0.3",
           "Prism.DryIoc.Forms": "7.2.0.1422",
+          "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.Essentials.Interfaces": "1.5.3.2",
           "Xamarin.Forms": "4.7.0.1239",
           "sqlite-net-pcl": "1.7.335"
@@ -1650,6 +1730,29 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-arm-aot": {
+      "Acr.UserDialogs/7.1.0.446": {
+        "type": "package",
+        "dependencies": {
+          "Coding4Fun.Toolkit.Controls": "2.1.8"
+        },
+        "compile": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        }
+      },
+      "Coding4Fun.Toolkit.Controls/2.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        }
+      },
       "DryIoc.dll/4.0.7": {
         "type": "package",
         "dependencies": {
@@ -1898,6 +2001,20 @@
         },
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "Plugins.Forms.ButtonCircle/2.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.1.0.697729"
+        },
+        "compile": {
+          "lib/UAP10/ButtonCircle.FormsPlugin.Abstractions.dll": {},
+          "lib/UAP10/ButtonCircle.FormsPlugin.UWP.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/ButtonCircle.FormsPlugin.Abstractions.dll": {},
+          "lib/UAP10/ButtonCircle.FormsPlugin.UWP.dll": {}
         }
       },
       "Prism.Core/7.2.0.1422": {
@@ -2623,7 +2740,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Acr.UserDialogs": "7.1.0.446",
+          "Plugins.Forms.ButtonCircle": "2.0.3",
           "Prism.DryIoc.Forms": "7.2.0.1422",
+          "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.Essentials.Interfaces": "1.5.3.2",
           "Xamarin.Forms": "4.7.0.1239",
           "sqlite-net-pcl": "1.7.335"
@@ -2637,6 +2757,29 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-arm64-aot": {
+      "Acr.UserDialogs/7.1.0.446": {
+        "type": "package",
+        "dependencies": {
+          "Coding4Fun.Toolkit.Controls": "2.1.8"
+        },
+        "compile": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        }
+      },
+      "Coding4Fun.Toolkit.Controls/2.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        }
+      },
       "DryIoc.dll/4.0.7": {
         "type": "package",
         "dependencies": {
@@ -2885,6 +3028,20 @@
         },
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "Plugins.Forms.ButtonCircle/2.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.1.0.697729"
+        },
+        "compile": {
+          "lib/UAP10/ButtonCircle.FormsPlugin.Abstractions.dll": {},
+          "lib/UAP10/ButtonCircle.FormsPlugin.UWP.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/ButtonCircle.FormsPlugin.Abstractions.dll": {},
+          "lib/UAP10/ButtonCircle.FormsPlugin.UWP.dll": {}
         }
       },
       "Prism.Core/7.2.0.1422": {
@@ -3607,7 +3764,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Acr.UserDialogs": "7.1.0.446",
+          "Plugins.Forms.ButtonCircle": "2.0.3",
           "Prism.DryIoc.Forms": "7.2.0.1422",
+          "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.Essentials.Interfaces": "1.5.3.2",
           "Xamarin.Forms": "4.7.0.1239",
           "sqlite-net-pcl": "1.7.335"
@@ -3621,6 +3781,29 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-x64": {
+      "Acr.UserDialogs/7.1.0.446": {
+        "type": "package",
+        "dependencies": {
+          "Coding4Fun.Toolkit.Controls": "2.1.8"
+        },
+        "compile": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        }
+      },
+      "Coding4Fun.Toolkit.Controls/2.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        }
+      },
       "DryIoc.dll/4.0.7": {
         "type": "package",
         "dependencies": {
@@ -3869,6 +4052,20 @@
         },
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "Plugins.Forms.ButtonCircle/2.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.1.0.697729"
+        },
+        "compile": {
+          "lib/UAP10/ButtonCircle.FormsPlugin.Abstractions.dll": {},
+          "lib/UAP10/ButtonCircle.FormsPlugin.UWP.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/ButtonCircle.FormsPlugin.Abstractions.dll": {},
+          "lib/UAP10/ButtonCircle.FormsPlugin.UWP.dll": {}
         }
       },
       "Prism.Core/7.2.0.1422": {
@@ -4519,7 +4716,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Acr.UserDialogs": "7.1.0.446",
+          "Plugins.Forms.ButtonCircle": "2.0.3",
           "Prism.DryIoc.Forms": "7.2.0.1422",
+          "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.Essentials.Interfaces": "1.5.3.2",
           "Xamarin.Forms": "4.7.0.1239",
           "sqlite-net-pcl": "1.7.335"
@@ -4533,6 +4733,29 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-x64-aot": {
+      "Acr.UserDialogs/7.1.0.446": {
+        "type": "package",
+        "dependencies": {
+          "Coding4Fun.Toolkit.Controls": "2.1.8"
+        },
+        "compile": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        }
+      },
+      "Coding4Fun.Toolkit.Controls/2.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        }
+      },
       "DryIoc.dll/4.0.7": {
         "type": "package",
         "dependencies": {
@@ -4781,6 +5004,20 @@
         },
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "Plugins.Forms.ButtonCircle/2.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.1.0.697729"
+        },
+        "compile": {
+          "lib/UAP10/ButtonCircle.FormsPlugin.Abstractions.dll": {},
+          "lib/UAP10/ButtonCircle.FormsPlugin.UWP.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/ButtonCircle.FormsPlugin.Abstractions.dll": {},
+          "lib/UAP10/ButtonCircle.FormsPlugin.UWP.dll": {}
         }
       },
       "Prism.Core/7.2.0.1422": {
@@ -5506,7 +5743,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Acr.UserDialogs": "7.1.0.446",
+          "Plugins.Forms.ButtonCircle": "2.0.3",
           "Prism.DryIoc.Forms": "7.2.0.1422",
+          "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.Essentials.Interfaces": "1.5.3.2",
           "Xamarin.Forms": "4.7.0.1239",
           "sqlite-net-pcl": "1.7.335"
@@ -5520,6 +5760,29 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-x86": {
+      "Acr.UserDialogs/7.1.0.446": {
+        "type": "package",
+        "dependencies": {
+          "Coding4Fun.Toolkit.Controls": "2.1.8"
+        },
+        "compile": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        }
+      },
+      "Coding4Fun.Toolkit.Controls/2.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        }
+      },
       "DryIoc.dll/4.0.7": {
         "type": "package",
         "dependencies": {
@@ -5768,6 +6031,20 @@
         },
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "Plugins.Forms.ButtonCircle/2.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.1.0.697729"
+        },
+        "compile": {
+          "lib/UAP10/ButtonCircle.FormsPlugin.Abstractions.dll": {},
+          "lib/UAP10/ButtonCircle.FormsPlugin.UWP.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/ButtonCircle.FormsPlugin.Abstractions.dll": {},
+          "lib/UAP10/ButtonCircle.FormsPlugin.UWP.dll": {}
         }
       },
       "Prism.Core/7.2.0.1422": {
@@ -6418,7 +6695,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Acr.UserDialogs": "7.1.0.446",
+          "Plugins.Forms.ButtonCircle": "2.0.3",
           "Prism.DryIoc.Forms": "7.2.0.1422",
+          "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.Essentials.Interfaces": "1.5.3.2",
           "Xamarin.Forms": "4.7.0.1239",
           "sqlite-net-pcl": "1.7.335"
@@ -6432,6 +6712,29 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-x86-aot": {
+      "Acr.UserDialogs/7.1.0.446": {
+        "type": "package",
+        "dependencies": {
+          "Coding4Fun.Toolkit.Controls": "2.1.8"
+        },
+        "compile": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        }
+      },
+      "Coding4Fun.Toolkit.Controls/2.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        }
+      },
       "DryIoc.dll/4.0.7": {
         "type": "package",
         "dependencies": {
@@ -6680,6 +6983,20 @@
         },
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "Plugins.Forms.ButtonCircle/2.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.1.0.697729"
+        },
+        "compile": {
+          "lib/UAP10/ButtonCircle.FormsPlugin.Abstractions.dll": {},
+          "lib/UAP10/ButtonCircle.FormsPlugin.UWP.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/ButtonCircle.FormsPlugin.Abstractions.dll": {},
+          "lib/UAP10/ButtonCircle.FormsPlugin.UWP.dll": {}
         }
       },
       "Prism.Core/7.2.0.1422": {
@@ -7405,7 +7722,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Acr.UserDialogs": "7.1.0.446",
+          "Plugins.Forms.ButtonCircle": "2.0.3",
           "Prism.DryIoc.Forms": "7.2.0.1422",
+          "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.Essentials.Interfaces": "1.5.3.2",
           "Xamarin.Forms": "4.7.0.1239",
           "sqlite-net-pcl": "1.7.335"
@@ -7420,6 +7740,87 @@
     }
   },
   "libraries": {
+    "Acr.UserDialogs/7.1.0.446": {
+      "sha512": "7YF7hk4qy4x9pKrVzKnjTEvua+kTSlHqdPPvP4gIqsxymPH6I3nAW2lpSo8kX97nTBbwkfddtrikwAXIYxRNIw==",
+      "type": "package",
+      "path": "acr.userdialogs/7.1.0.446",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "acr.userdialogs.7.1.0.446.nupkg.sha512",
+        "acr.userdialogs.nuspec",
+        "lib/monoandroid10.0/Acr.UserDialogs.dll",
+        "lib/monoandroid10.0/Acr.UserDialogs.pdb",
+        "lib/monoandroid10.0/Acr.UserDialogs.xml",
+        "lib/monoandroid90/Acr.UserDialogs.dll",
+        "lib/monoandroid90/Acr.UserDialogs.pdb",
+        "lib/monoandroid90/Acr.UserDialogs.xml",
+        "lib/netstandard2.0/Acr.UserDialogs.dll",
+        "lib/netstandard2.0/Acr.UserDialogs.pdb",
+        "lib/netstandard2.0/Acr.UserDialogs.xml",
+        "lib/uap10.0.16299/Acr.UserDialogs.dll",
+        "lib/uap10.0.16299/Acr.UserDialogs.pdb",
+        "lib/uap10.0.16299/Acr.UserDialogs.pri",
+        "lib/uap10.0.16299/Acr.UserDialogs.xml",
+        "lib/uap10.0.16299/Acr.UserDialogs/Acr.UserDialogs.xr.xml",
+        "lib/uap10.0.16299/Acr.UserDialogs/Platforms/Uwp/ActionSheetContentDialog.xaml",
+        "lib/uap10.0.16299/Acr.UserDialogs/Platforms/Uwp/DatePickerControl.xaml",
+        "lib/uap10.0.16299/Acr.UserDialogs/Platforms/Uwp/LoginContentDialog.xaml",
+        "lib/uap10.0.16299/Acr.UserDialogs/Platforms/Uwp/ProgressContentDialog.xaml",
+        "lib/uap10.0.16299/Acr.UserDialogs/Platforms/Uwp/TimePickerControl.xaml",
+        "lib/xamarinios10/Acr.UserDialogs.dll",
+        "lib/xamarinios10/Acr.UserDialogs.pdb",
+        "lib/xamarinios10/Acr.UserDialogs.xml",
+        "lib/xamarinmac20/Acr.UserDialogs.dll",
+        "lib/xamarinmac20/Acr.UserDialogs.pdb",
+        "lib/xamarinmac20/Acr.UserDialogs.xml",
+        "lib/xamarintvos10/Acr.UserDialogs.dll",
+        "lib/xamarintvos10/Acr.UserDialogs.pdb",
+        "lib/xamarintvos10/Acr.UserDialogs.xml",
+        "readme.txt"
+      ]
+    },
+    "Coding4Fun.Toolkit.Controls/2.1.8": {
+      "sha512": "PCRWgCiW9H8qzT8xYxNtpq4ZWpvh2gtrKAnWtEOXzapyXTEt8esCt0cqRwvosW+bytyfohonmB7UxB0EGXmdsQ==",
+      "type": "package",
+      "path": "coding4fun.toolkit.controls/2.1.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "coding4fun.toolkit.controls.2.1.8.nupkg.sha512",
+        "coding4fun.toolkit.controls.nuspec",
+        "content/ReadMe.Coding4Fun.Toolkit.txt",
+        "content/windowsphone8/Toolkit.Content/ApplicationBar.Cancel.png",
+        "content/windowsphone8/Toolkit.Content/ApplicationBar.Check.png",
+        "lib/netcore451/Coding4Fun.Toolkit.Controls.dll",
+        "lib/netcore451/Coding4Fun.Toolkit.Controls.pri",
+        "lib/netcore451/Coding4Fun.Toolkit.Controls/Coding4Fun.Toolkit.Controls.xr.xml",
+        "lib/netcore451/Coding4Fun.Toolkit.Controls/Themes/Generic.xbf",
+        "lib/netcore451/Coding4Fun.Toolkit.dll",
+        "lib/netcore451/Coding4Fun.Toolkit.pri",
+        "lib/windowsphone8/Coding4Fun.Toolkit.Controls.dll",
+        "lib/windowsphone8/Coding4Fun.Toolkit.dll",
+        "lib/windowsphone8/cs/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/da/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/de/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/es/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/fr/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/fr/hu/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/it/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/ko/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/no/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/pl/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/pt/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/ru/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/sk/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/wpa81/Coding4Fun.Toolkit.Controls.dll",
+        "lib/wpa81/Coding4Fun.Toolkit.Controls.pri",
+        "lib/wpa81/Coding4Fun.Toolkit.Controls/Coding4Fun.Toolkit.Controls.xr.xml",
+        "lib/wpa81/Coding4Fun.Toolkit.Controls/Themes/Generic.xbf",
+        "lib/wpa81/Coding4Fun.Toolkit.dll",
+        "lib/wpa81/Coding4Fun.Toolkit.pri"
+      ]
+    },
     "DryIoc.dll/4.0.7": {
       "sha512": "CHSWiSNf0tTpnHFt+DPB8mzgQMM9PbaFk7DP4g70+kTXsAS7fQlUI/yW4S+b6COOYsVQ+FPhxAw9NMU/2PGE7Q==",
       "type": "package",
@@ -8003,6 +8404,40 @@
         "lib/netstandard1.0/_._",
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
+      ]
+    },
+    "Plugins.Forms.ButtonCircle/2.0.3": {
+      "sha512": "cbnNLnCAgmjmW3XVxC/f5cGSVIY1WMvK9rrOw/rvFZpnEMAoGPrJbt/fxFRllfw02jbgmujnuekGPalvngybgw==",
+      "type": "package",
+      "path": "plugins.forms.buttoncircle/2.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/MonoAndroid10/Assets/fontawesome.ttf",
+        "content/MonoAndroid10/Assets/materialicons.ttf",
+        "content/UAP10/ButtonCircle.FormsPlugin.UWP/Assets/Fonts/fontawesome.ttf",
+        "content/UAP10/ButtonCircle.FormsPlugin.UWP/Assets/Fonts/materialicons.ttf",
+        "content/Xamarin.iOS10/Resources/fontawesome.ttf",
+        "content/Xamarin.iOS10/Resources/materialicons.ttf",
+        "lib/MonoAndroid10/ButtonCircle.FormsPlugin.Abstractions.dll",
+        "lib/MonoAndroid10/ButtonCircle.FormsPlugin.Abstractions.pdb",
+        "lib/MonoAndroid10/ButtonCircle.FormsPlugin.Android.XML",
+        "lib/MonoAndroid10/ButtonCircle.FormsPlugin.Android.dll",
+        "lib/MonoAndroid10/ButtonCircle.FormsPlugin.Android.pdb",
+        "lib/UAP10/ButtonCircle.FormsPlugin.Abstractions.dll",
+        "lib/UAP10/ButtonCircle.FormsPlugin.Abstractions.pdb",
+        "lib/UAP10/ButtonCircle.FormsPlugin.UWP.XML",
+        "lib/UAP10/ButtonCircle.FormsPlugin.UWP.dll",
+        "lib/Xamarin.iOS10/ButtonCircle.FormsPlugin.Abstractions.dll",
+        "lib/Xamarin.iOS10/ButtonCircle.FormsPlugin.Abstractions.pdb",
+        "lib/Xamarin.iOS10/ButtonCircle.FormsPlugin.iOS.XML",
+        "lib/Xamarin.iOS10/ButtonCircle.FormsPlugin.iOS.dll",
+        "lib/netstandard2.0/ButtonCircle.FormsPlugin.Abstractions.deps.json",
+        "lib/netstandard2.0/ButtonCircle.FormsPlugin.Abstractions.dll",
+        "lib/netstandard2.0/ButtonCircle.FormsPlugin.Abstractions.pdb",
+        "lib/netstandard2.0/ButtonCircle.FormsPlugin.Abstractions.xml",
+        "plugins.forms.buttoncircle.2.0.3.nupkg.sha512",
+        "plugins.forms.buttoncircle.nuspec"
       ]
     },
     "Prism.Core/7.2.0.1422": {
@@ -13580,9 +14015,11 @@
   },
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.16299": [
+      "Acr.UserDialogs >= 7.1.0.446",
       "CrashAlarm >= 1.0.0",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.10",
       "Prism.DryIoc.Forms >= 7.2.0.1422",
+      "Xamarin.Essentials >= 1.5.3.2",
       "Xamarin.Essentials.Interfaces >= 1.5.3.2",
       "Xamarin.Forms >= 4.7.0.1239"
     ]
@@ -13616,6 +14053,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://bld04/guestAuth/app/nuget/v1/FeedService.svc/": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -13631,6 +14069,10 @@
     "frameworks": {
       "uap10.0.16299": {
         "dependencies": {
+          "Acr.UserDialogs": {
+            "target": "Package",
+            "version": "[7.1.0.446, )"
+          },
           "Microsoft.NETCore.UniversalWindowsPlatform": {
             "target": "Package",
             "version": "[6.2.10, )"
@@ -13638,6 +14080,10 @@
           "Prism.DryIoc.Forms": {
             "target": "Package",
             "version": "[7.2.0.1422, )"
+          },
+          "Xamarin.Essentials": {
+            "target": "Package",
+            "version": "[1.5.3.2, )"
           },
           "Xamarin.Essentials.Interfaces": {
             "target": "Package",

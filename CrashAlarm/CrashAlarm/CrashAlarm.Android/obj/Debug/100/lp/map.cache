@@ -82,3 +82,5 @@ androidx.media.media
 androidx.lifecycle.lifecycle-livedata
 androidx.legacy.legacy-support-v4
 androidx.browser.browser
+Acr.UserDialogs
+AndHUD
