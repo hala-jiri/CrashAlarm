@@ -9,7 +9,6 @@
 
     <TabbedPage.Children>
         <views:MainTabPage />
-        <views:HistoryTabPage />
         <views:ContactsTabPage />
         <views:SettingsTabPage />
         <views:AboutTabPage />

@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="http://prismlibrary.com"
              xmlns:resources="clr-namespace:CrashAlarm.Resources;assembly=CrashAlarm"
+             xmlns:viewModels="clr-namespace:CrashAlarm.ViewModels;assembly=CrashAlarm"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="CrashAlarm.Views.MainTabPage"
              Title="{x:Static resources:AppResource.MainTabTitle}">
@@ -21,20 +22,24 @@
             <ColumnDefinition Width="5*" />
         </Grid.ColumnDefinitions>
 
-        <Button Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
-                Text="Help"  WidthRequest="40" HeightRequest="40" CornerRadius="20"
-                Clicked="clickedOnHelpButton"/>
+        <Grid.BindingContext>
+            <viewModels:MainTabPageViewModel />
+        </Grid.BindingContext>
 
-        <Label Grid.Row="1" Grid.Column="0" Padding="0,20,0,0" HorizontalOptions="End"  Text="Your location:"/>
+        <Button Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
+                Text="{x:Static resources:AppResource.HelpButtonText}"  WidthRequest="40" HeightRequest="40" CornerRadius="20"
+                Command="{Binding SendSMSCommand}"/>
+
+        <Label Grid.Row="1" Grid.Column="0" Padding="0,20,0,0" HorizontalOptions="End"  Text="{x:Static resources:AppResource.YourLocationLabel}"/>
 
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
             <Label Text="{x:Static resources:AppResource.Latitude}" Padding="0,0,10,0" HorizontalOptions="End"/>
-            <Label x:Name="latLabel"/>
+            <Label x:Name="latLabel" Text="{Binding Latitude}"/>
         </StackLayout>
 
         <StackLayout  Orientation="Horizontal" HorizontalOptions="Center" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
             <Label Text="{x:Static resources:AppResource.Longitude}" Padding="0,0,10,0" HorizontalOptions="End"/>
-            <Label x:Name="longLabel"/>
+            <Label x:Name="longLabel" Text="{Binding Longitude}"/>
         </StackLayout>
 
     </Grid>
