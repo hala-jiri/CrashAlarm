@@ -70,6 +70,15 @@ namespace CrashAlarm.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add to database.
+        /// </summary>
+        internal static string AddContactToDatabaseButtonTitle {
+            get {
+                return ResourceManager.GetString("AddContactToDatabaseButtonTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Contacts.
         /// </summary>
         internal static string ContactsTabTitle {
@@ -93,6 +102,60 @@ namespace CrashAlarm.Resources {
         internal static string CrashAlarmTitleInAbout {
             get {
                 return ResourceManager.GetString("CrashAlarmTitleInAbout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        internal static string DeleteMeButtonTitle {
+            get {
+                return ResourceManager.GetString("DeleteMeButtonTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter contact number.
+        /// </summary>
+        internal static string EnterContactNumberTitle {
+            get {
+                return ResourceManager.GetString("EnterContactNumberTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter name.
+        /// </summary>
+        internal static string EnterNameTitle {
+            get {
+                return ResourceManager.GetString("EnterNameTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Type of contact.
+        /// </summary>
+        internal static string EnterTypeOfContact {
+            get {
+                return ResourceManager.GetString("EnterTypeOfContact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Help!.
+        /// </summary>
+        internal static string HelpButtonText {
+            get {
+                return ResourceManager.GetString("HelpButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Help message.
+        /// </summary>
+        internal static string HelpMessageTitle {
+            get {
+                return ResourceManager.GetString("HelpMessageTitle", resourceCulture);
             }
         }
         
@@ -124,6 +187,15 @@ namespace CrashAlarm.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CrashAlarm App.
+        /// </summary>
+        internal static string MainPageTitle {
+            get {
+                return ResourceManager.GetString("MainPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Main.
         /// </summary>
         internal static string MainTabTitle {
@@ -133,11 +205,74 @@ namespace CrashAlarm.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to My position.
+        /// </summary>
+        internal static string MyPositionString {
+            get {
+                return ResourceManager.GetString("MyPositionString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Settings.
         /// </summary>
         internal static string SettingsTabTitle {
             get {
                 return ResourceManager.GetString("SettingsTabTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Alert to Emergency.
+        /// </summary>
+        internal static string SwitchAlertToEmergencyTitle {
+            get {
+                return ResourceManager.GetString("SwitchAlertToEmergencyTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Alert to Family.
+        /// </summary>
+        internal static string SwitchAlertToFamilyTitle {
+            get {
+                return ResourceManager.GetString("SwitchAlertToFamilyTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Alert to Friends.
+        /// </summary>
+        internal static string SwitchAlertToFriendsTitle {
+            get {
+                return ResourceManager.GetString("SwitchAlertToFriendsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Welcome to CrashAlarm app.
+        /// </summary>
+        internal static string WelcomeMessageOnMainPage {
+            get {
+                return ResourceManager.GetString("WelcomeMessageOnMainPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Based on Xamarin Forms and Prism.
+        /// </summary>
+        internal static string WelcomeMessageSecondLineOnMainPage {
+            get {
+                return ResourceManager.GetString("WelcomeMessageSecondLineOnMainPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your location:.
+        /// </summary>
+        internal static string YourLocationLabel {
+            get {
+                return ResourceManager.GetString("YourLocationLabel", resourceCulture);
             }
         }
     }

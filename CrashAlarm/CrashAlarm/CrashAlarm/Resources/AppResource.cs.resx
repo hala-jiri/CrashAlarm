@@ -125,4 +125,49 @@
   <data name="CrashAlarmTitleInAbout" xml:space="preserve">
     <value>Crash Alarm app</value>
   </data>
+  <data name="HelpButtonText" xml:space="preserve">
+    <value>Pomoc!</value>
+  </data>
+  <data name="MyPositionString" xml:space="preserve">
+    <value>Má pozice</value>
+  </data>
+  <data name="HelpMessageTitle" xml:space="preserve">
+    <value>Záchraná zpráva</value>
+  </data>
+  <data name="SwitchAlertToEmergencyTitle" xml:space="preserve">
+    <value>Zpráva záchranné složce</value>
+  </data>
+  <data name="SwitchAlertToFamilyTitle" xml:space="preserve">
+    <value>Zpráva rodině</value>
+  </data>
+  <data name="SwitchAlertToFriendsTitle" xml:space="preserve">
+    <value>Zpráva přátelům</value>
+  </data>
+  <data name="EnterContactNumberTitle" xml:space="preserve">
+    <value>Vložte kontaktní číslo</value>
+  </data>
+  <data name="EnterNameTitle" xml:space="preserve">
+    <value>Vložte jméno</value>
+  </data>
+  <data name="EnterTypeOfContact" xml:space="preserve">
+    <value>Typ kontaktu</value>
+  </data>
+  <data name="DeleteMeButtonTitle" xml:space="preserve">
+    <value>Smazat</value>
+  </data>
+  <data name="AddContactToDatabaseButtonTitle" xml:space="preserve">
+    <value>Vložit do databáze</value>
+  </data>
+  <data name="YourLocationLabel" xml:space="preserve">
+    <value>Vaše pozice</value>
+  </data>
+  <data name="MainPageTitle" xml:space="preserve">
+    <value>CrashAlarm App</value>
+  </data>
+  <data name="WelcomeMessageOnMainPage" xml:space="preserve">
+    <value>Vítejte v aplikaci CrashAlarm</value>
+  </data>
+  <data name="WelcomeMessageSecondLineOnMainPage" xml:space="preserve">
+    <value>Založeném na Xamarin Forms a Prism</value>
+  </data>
 </root>
