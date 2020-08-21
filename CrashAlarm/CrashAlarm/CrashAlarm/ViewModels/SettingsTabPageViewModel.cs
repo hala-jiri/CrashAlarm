@@ -65,7 +65,8 @@ namespace CrashAlarm.ViewModels
             set
             {
                 _switchMessageTofriends = value;
-                OnPropertyChanged(nameof(SwitchMessageTofriends));
+                //OnPropertyChanged(nameof(SwitchMessageTofriends));
+                RaisePropertyChanged(nameof(SwitchMessageTofriends));
             }
         }
 
