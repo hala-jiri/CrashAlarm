@@ -250,6 +250,15 @@ namespace CrashAlarm.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Messages were send. Number of messages: .
+        /// </summary>
+        internal static string ToastSendMessage {
+            get {
+                return ResourceManager.GetString("ToastSendMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Welcome to CrashAlarm app.
         /// </summary>
         internal static string WelcomeMessageOnMainPage {

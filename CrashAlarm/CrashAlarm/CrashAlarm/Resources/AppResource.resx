@@ -189,4 +189,7 @@
   <data name="MainPageTitle" xml:space="preserve">
     <value>CrashAlarm App</value>
   </data>
+  <data name="ToastSendMessage" xml:space="preserve">
+    <value>Messages were send. Number of messages: </value>
+  </data>
 </root>
