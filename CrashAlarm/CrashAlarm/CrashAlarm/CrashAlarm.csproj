@@ -5,6 +5,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="images\familyRestroom.png" />
+    <None Remove="images\groups.png" />
+    <None Remove="images\localHospital.png" />
+    <None Remove="images\peopleAlt.png" />
+    <None Remove="images\personAdd.png" />
+    <None Remove="images\ringVolume.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="images\familyRestroom.png" />
+    <EmbeddedResource Include="images\groups.png" />
+    <EmbeddedResource Include="images\localHospital.png" />
+    <EmbeddedResource Include="images\peopleAlt.png" />
+    <EmbeddedResource Include="images\personAdd.png" />
+    <EmbeddedResource Include="images\ringVolume.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Acr.UserDialogs" Version="7.1.0.446" />
     <PackageReference Include="Plugins.Forms.ButtonCircle" Version="2.0.3" />
     <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
