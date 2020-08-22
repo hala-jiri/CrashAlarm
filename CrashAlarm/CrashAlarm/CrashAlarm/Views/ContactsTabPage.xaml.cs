@@ -69,7 +69,13 @@ namespace CrashAlarm.Views
 
         public async void OnDelete(object sender, EventArgs e)
         {
-            var menuItem = ((MenuItem) sender);
+            //var menuItem = ((MenuItem) sender);
+            var contactToDelete = ((ImageButton) sender).CommandParameter;
+            if (contactToDelete != null)
+            {
+                int result = await App.DbRepository.DeleteContactAsync((Contact)contactToDelete);
+                collectionView.ItemsSource = await App.DbRepository.GetAllContactsAsync();
+            }
             bool confimResult = false;
 
             //    bool r = await App.Current.MainPage.DisplayAlert("Delete confirm", "Delete item?", "ok", "cancel");
@@ -84,8 +90,8 @@ namespace CrashAlarm.Views
             //        int result = await App.DbRepository.DeleteContactAsync((Contact)menuItem.BindingContext);
             //    }
             //});
-            int result = await App.DbRepository.DeleteContactAsync((Contact) menuItem.BindingContext);
-            collectionView.ItemsSource = await App.DbRepository.GetAllContactsAsync();
+            
+            
         }
     }
 
