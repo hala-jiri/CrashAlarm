@@ -22,11 +22,20 @@ namespace CrashAlarm
             //_database.DropTableAsync<Settings>();
 
             if (!dbTableExist("Contact"))
-                _database.CreateTableAsync<Contact>().Wait();
+            { 
+                _database.CreateTableAsync<Contact>();
+                _database.InsertAsync(new Contact()
+                {
+                    ContactNumber = "+42077998855",
+                    ContactName = "Jirka",
+                    TypeOfContact = "familyRestroom.png"
+                });
+
+            }
 
             if (!dbTableExist("Settings"))
             {
-                _database.CreateTableAsync<Settings>().Wait();
+                _database.CreateTableAsync<Settings>();
                 _database.InsertAsync(new Settings()
                 {
                     GSMNotificationToFriends = true,

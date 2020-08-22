@@ -16,8 +16,7 @@ namespace CrashAlarm.Views
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            listView.ItemsSource = await App.DbRepository.GetAllContactsAsync();
-            //listViewFirst.ItemsSource = await App.DbRepository.GetAllContactsAsync();
+            collectionView.ItemsSource = await App.DbRepository.GetAllContactsAsync();
         }
 
         async void OnButtonClicked(object sender, EventArgs e)
@@ -30,24 +29,51 @@ namespace CrashAlarm.Views
                 else
                     selectedTypeIndex = pickerTypeOfContact.SelectedIndex;
 
+                var pickedItemString = pickerTypeOfContact.ItemsSource[selectedTypeIndex].ToString();
+                string  pickedTypeOfContactFileName;
+                switch (pickedItemString)
+                {
+                    case "No specific":
+                        pickedTypeOfContactFileName = "personAdd.png";
+                        break;
+
+                    case "Emergency":
+                        pickedTypeOfContactFileName = "localHospital.png";
+                        break;
+
+                    case "Family":
+                        pickedTypeOfContactFileName = "familyRestroom.png";
+                        break;
+
+                    case "Friends":
+                        pickedTypeOfContactFileName = "groups.png";
+                        break;
+
+                    default:
+                        pickedTypeOfContactFileName = "personAdd.png";
+                        break;
+                }
+
+
                 await App.DbRepository.SaveContactAsync(new Contact
                 {
                     ContactName = NameEntry.Text,
                     ContactNumber = NumberEntry.Text,
-                    TypeOfContact = pickerTypeOfContact.ItemsSource[selectedTypeIndex].ToString()
+                    TypeOfContact = pickedTypeOfContactFileName
                 });
 
                 NameEntry.Text = NumberEntry.Text = string.Empty;
-                listView.ItemsSource = await App.DbRepository.GetAllContactsAsync();
+                collectionView.ItemsSource = await App.DbRepository.GetAllContactsAsync();
             }
         }
+
         public async void OnDelete(object sender, EventArgs e)
         {
-            var menuItem = ((MenuItem)sender);
+            var menuItem = ((MenuItem) sender);
             bool confimResult = false;
-         
+
             //    bool r = await App.Current.MainPage.DisplayAlert("Delete confirm", "Delete item?", "ok", "cancel");
-           
+
 
 
             //Device.BeginInvokeOnMainThread(async()=>
@@ -58,9 +84,8 @@ namespace CrashAlarm.Views
             //        int result = await App.DbRepository.DeleteContactAsync((Contact)menuItem.BindingContext);
             //    }
             //});
-            int result = await App.DbRepository.DeleteContactAsync((Contact)menuItem.BindingContext);
-            listView.ItemsSource = await App.DbRepository.GetAllContactsAsync();
-
+            int result = await App.DbRepository.DeleteContactAsync((Contact) menuItem.BindingContext);
+            collectionView.ItemsSource = await App.DbRepository.GetAllContactsAsync();
         }
     }
 

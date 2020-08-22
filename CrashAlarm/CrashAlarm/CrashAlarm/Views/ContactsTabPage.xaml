@@ -25,21 +25,43 @@
 
 
         <Button Text="{x:Static resources:AppResource.AddContactToDatabaseButtonTitle}" Clicked="OnButtonClicked" />
-        <ListView x:Name="listView">
-            <ListView.ItemTemplate>
+        <CollectionView x:Name="collectionView">
+            <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell>
+                    <!--<Frame>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnDelete" Command="{Binding DeleteCommand}" CommandParameter="{Binding .}"/>
+                        
+                        </Frame.GestureRecognizers>-->
+                    <!--<ViewCell>
                         <ViewCell.ContextActions>
                             <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Text="{x:Static resources:AppResource.DeleteMeButtonTitle}" IsDestructive="True"/>
-                        </ViewCell.ContextActions>
-                        <StackLayout>
-                            <Label Text="{Binding ContactName}" />
-                            <Label Text="{Binding ContactNumber}" />
-                            <Label Text="{Binding TypeOfContact}" TextColor="#503026" />
-                        </StackLayout>
-                    </ViewCell>
+                        </ViewCell.ContextActions>-->
+                        <Grid Padding="10,10,10,10" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30" />
+                                <RowDefinition Height="30" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="4*" />
+                                <ColumnDefinition Width="3*" />
+                                <ColumnDefinition Width="3*" />
+
+                            </Grid.ColumnDefinitions>
+
+
+                            <Label Text="{Binding ContactName}" Grid.Row="0" Grid.Column="0"/>
+                            <Label Text="{Binding ContactNumber}" Grid.Row="1" Grid.Column="0" />
+
+                            <!--<Label Text="{Binding TypeOfContact}" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" TextColor="#503026"/>-->
+                            <Image Source="{Binding TypeOfContact}"  Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" WidthRequest="20" HeightRequest="20"/>
+                            <ImageButton Source="delete.png" Grid.Row="0" Grid.Column="2"  Grid.RowSpan="2" HeightRequest="30" WidthRequest="30" Clicked="OnDelete" CommandParameter="{Binding .}" />
+
+                        </Grid>
+                        <!--</Frame>-->
+                    <!--</ViewCell>-->
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </StackLayout>
 </ContentPage>
