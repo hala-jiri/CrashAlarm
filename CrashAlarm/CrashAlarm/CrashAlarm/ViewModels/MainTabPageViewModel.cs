@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Acr.UserDialogs;
 using CrashAlarm.Models;
+using CrashAlarm.Resources;
 using ImTools;
+using Plugin.Messaging;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Color = System.Drawing.Color;
@@ -95,8 +97,16 @@ namespace CrashAlarm.ViewModels
         {
             try
             {
-                var message = new SmsMessage(messageText, recipients);
-                await Sms.ComposeAsync(message);
+                var smsMessenger = CrossMessaging.Current.SmsMessenger;
+                if (smsMessenger.CanSendSms)
+                {
+                    foreach (var recipient in recipients)
+                    {
+                        smsMessenger.SendSmsInBackground(recipient, messageText);
+                    }
+                }
+                //var message = new SmsMessage(messageText, recipients);
+                //await Sms.ComposeAsync(message);
             }
             catch (FeatureNotSupportedException ex)
             {
@@ -128,26 +138,29 @@ namespace CrashAlarm.ViewModels
 
                 NumberOfContacts = contactList.Count;
 
+                if (NumberOfContacts == 0)
+                {
+                    UserDialogs.Instance.Toast("You dont have any contacts available.", TimeSpan.FromSeconds(5));
+                    return;
+                }
+
                 contactNumbers.AddRange(contactList.Select(x => x.ContactNumber));
 
                 string messageToSend =
                     setting.HelpMessage + $" My Location (Lon: {_location.Longitude}, Lat: {_location.Latitude}";
 
 
-                //await SendSms(messageToSend, contactNumbers.ToArray());
+                await SendSms(messageToSend, contactNumbers.ToArray());
 
+                //var kuku = AppResource.ToastSendMessage;
+                string toastMessage = "Your messages were send, number of messages: " + contactNumbers.Count.ToString();
+                 UserDialogs.Instance.Toast(toastMessage, TimeSpan.FromSeconds(5));
                 //UserDialogs.Instance.Toast("Text", TimeSpan.FromSeconds(3));
                 //UserDialogs.Instance.Toast(new ToastConfig("text") {BackgroundColor = Color.Pink});
 
-                var res = await UserDialogs.Instance.ConfirmAsync("zprava", "TItle", "ok", "nic");
+                //var res = await UserDialogs.Instance.ConfirmAsync("zprava", "TItle", "ok", "nic");
 
             }
-            // check location
-            // check settings
-            // check contact list
-            // send all messages
-
-            // show notification
         }
 
     }
