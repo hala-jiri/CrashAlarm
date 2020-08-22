@@ -128,7 +128,7 @@ namespace CrashAlarm.ViewModels
 
 
                 if (setting.GSMNotificationToFriends)
-                    contactList.AddRange(await App.DbRepository.GetFriendContactsAsync());
+                    contactList.AddRange(App.DbRepository.GetFriendContactsAsync().Result);
 
                 if (setting.GSMNotificationToFamily)
                     contactList.AddRange(await App.DbRepository.GetFamilyContactsAsync());
