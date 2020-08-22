@@ -1,5 +1,8 @@
+Acr.UserDialogs
+AndHUD
 ButtonCircle.FormsPlugin.Android
 FormsViewGroup
+Plugin.Messaging
 Prism.Forms
 SQLitePCLRaw.lib.e_sqlite3.android
 Xamarin.AndroidX.Activity
@@ -82,5 +85,3 @@ androidx.media.media
 androidx.lifecycle.lifecycle-livedata
 androidx.legacy.legacy-support-v4
 androidx.browser.browser
-Acr.UserDialogs
-AndHUD
