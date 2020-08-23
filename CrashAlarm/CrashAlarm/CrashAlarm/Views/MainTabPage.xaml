@@ -26,11 +26,11 @@
             <viewModels:MainTabPageViewModel />
         </Grid.BindingContext>
 
-        <Button Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
+        <Button Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" ImageSource="ringVolume.png"
                 Text="{x:Static resources:AppResource.HelpButtonText}"  WidthRequest="40" HeightRequest="40" CornerRadius="20"
                 Command="{Binding SendSMSCommand}"/>
 
-        <Label Grid.Row="1" Grid.Column="0" Padding="0,20,0,0" HorizontalOptions="End"  Text="{x:Static resources:AppResource.YourLocationLabel}"/>
+        <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Padding="0,20,0,0" HorizontalOptions="Center" Text="{x:Static resources:AppResource.YourLocationLabel}"/>
 
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
             <Label Text="{x:Static resources:AppResource.Latitude}" Padding="0,0,10,0" HorizontalOptions="End"/>
