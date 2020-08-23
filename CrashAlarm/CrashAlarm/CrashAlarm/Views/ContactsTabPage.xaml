@@ -28,52 +28,40 @@
         <CollectionView x:Name="collectionView">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <!--<Frame>
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnDelete" Command="{Binding DeleteCommand}" CommandParameter="{Binding .}"/>
-                        
-                        </Frame.GestureRecognizers>-->
-                    <!--<ViewCell>
-                        <ViewCell.ContextActions>
-                            <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Text="{x:Static resources:AppResource.DeleteMeButtonTitle}" IsDestructive="True"/>
-                        </ViewCell.ContextActions>-->
                     <Grid Padding="10,10,10,0"   BackgroundColor="White">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="30" />
-                                <RowDefinition Height="30" />
-                                <RowDefinition Height="1" />
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30" />
+                            <RowDefinition Height="30" />
+                            <RowDefinition Height="1" />
                         </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="2*" />
-                                <ColumnDefinition Width="7*" />
-                                <ColumnDefinition Width="1*" />
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="7*" />
+                            <ColumnDefinition Width="1*" />
 
                         </Grid.ColumnDefinitions>
 
-                        <StackLayout Height="15" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Orientation="Horizontal" Margin="0,10,0,10">
+                        <StackLayout HeightRequest="15" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Orientation="Horizontal" Margin="0,10,0,10">
                             <Image Source="{Binding TypeOfContact}" WidthRequest="24" HeightRequest="24" Aspect="AspectFit"/>
                         </StackLayout>
 
                         <Label Text="{Binding ContactName}" Grid.Row="0" Grid.Column="1" FontSize="Medium" FontAttributes="Bold"/>
                         <Label Text="{Binding ContactNumber}" Grid.Row="1" Grid.Column="1" />
 
-                        <StackLayout Height="15" Grid.Row="0" Grid.Column="2" Grid.RowSpan="2" Orientation="Horizontal" Margin="0,10,0,10" HorizontalOptions="End">
+                        <StackLayout HeightRequest="15" Grid.Row="0" Grid.Column="2" Grid.RowSpan="2" Orientation="Horizontal" 
+                                     Margin="0,10,0,10" HorizontalOptions="End">
                             <ImageButton Aspect="AspectFit"  Source="delete.png"
-                                         Height="24" WidthRequest="24" 
+                                         WidthRequest="24" 
                                          Clicked="OnDelete" CommandParameter="{Binding .}"
                                          BackgroundColor="White"/>
                         </StackLayout>
-                        <BoxView 
-                                    Grid.Row="2"
-                                    Grid.Column="0"
-                                    HeightRequest="1"
-                                    BackgroundColor="Black"
-                                    Grid.ColumnSpan="3"
-                                    VerticalOptions="End"/>
-
+                        <BoxView Grid.Row="2"
+                                 Grid.Column="0"
+                                 HeightRequest="1"
+                                 BackgroundColor="Black"
+                                 Grid.ColumnSpan="3"
+                                 VerticalOptions="End"/>
                     </Grid>
-                        <!--</Frame>-->
-                    <!--</ViewCell>-->
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>

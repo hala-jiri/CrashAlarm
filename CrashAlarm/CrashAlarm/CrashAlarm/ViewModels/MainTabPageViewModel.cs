@@ -121,7 +121,7 @@ namespace CrashAlarm.ViewModels
         {
             if (_location != null)
             {
-                var setting = await App.DbRepository.GetSettingsAsync();
+                var setting = App.DbRepository.GetSettingsAsync().Result;
 
                 List<Contact> contactList = new List<Contact>();
                 List<string> contactNumbers = new List<string>();
