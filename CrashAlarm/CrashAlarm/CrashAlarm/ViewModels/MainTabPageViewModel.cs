@@ -100,8 +100,13 @@ namespace CrashAlarm.ViewModels
                 var smsMessenger = CrossMessaging.Current.SmsMessenger;
                 if (smsMessenger.CanSendSms)
                 {
+
+                    //var message = new SmsMessage(messageText, recipients);
+                    //await Sms.ComposeAsync(message);
+
                     foreach (var recipient in recipients)
                     {
+                        //smsMessenger = 
                         smsMessenger.SendSmsInBackground(recipient, messageText);
                     }
                 }
@@ -128,7 +133,7 @@ namespace CrashAlarm.ViewModels
 
 
                 if (setting.GSMNotificationToFriends)
-                    contactList.AddRange(App.DbRepository.GetFriendContactsAsync().Result);
+                    contactList.AddRange(await App.DbRepository.GetFriendContactsAsync());
 
                 if (setting.GSMNotificationToFamily)
                     contactList.AddRange(await App.DbRepository.GetFamilyContactsAsync());
@@ -147,8 +152,7 @@ namespace CrashAlarm.ViewModels
                 contactNumbers.AddRange(contactList.Select(x => x.ContactNumber));
 
                 string messageToSend =
-                    setting.HelpMessage + $" My Location (Lon: {_location.Longitude}, Lat: {_location.Latitude}";
-
+                    setting.HelpMessage + $" My Location (Lon: {_location.Longitude}, Lat: {_location.Latitude})";
 
                 await SendSms(messageToSend, contactNumbers.ToArray());
 

@@ -21,7 +21,7 @@ namespace CrashAlarm.Models
                 if (_typeOfContact != value)
                 {
                     _typeOfContact = value;
-                    App.DbRepository.SaveContactAsync(this);
+                    //App.DbRepository.SaveContactAsync(this);
                 }
             }
         }
@@ -35,7 +35,7 @@ namespace CrashAlarm.Models
                 if (_contactName != value)
                 {
                     _contactName = value;
-                    App.DbRepository.SaveContactAsync(this);
+                    //App.DbRepository.SaveContactAsync(this);
                 }
             }
         }
@@ -48,7 +48,7 @@ namespace CrashAlarm.Models
                 if (_contactNumber != value)
                 {
                     _contactNumber = value;
-                    App.DbRepository.SaveContactAsync(this);
+                    //App.DbRepository.SaveContactAsync(this);
                 }
             }
         }

@@ -18,24 +18,24 @@ namespace CrashAlarm
         public DbRepository()
         {
             _database = new SQLiteAsyncConnection(_dbPath);
-            //_database.DropTableAsync<Contact>();
-            //_database.DropTableAsync<Settings>();
+            //_database.DropTableAsync<Contact>().Wait();
+            //_database.DropTableAsync<Settings>().Wait();
 
             if (!dbTableExist("Contact"))
             { 
-                _database.CreateTableAsync<Contact>();
+                _database.CreateTableAsync<Contact>().Wait();
                 _database.InsertAsync(new Contact()
                 {
                     ContactNumber = "+42077998855",
                     ContactName = "Jirka",
                     TypeOfContact = "familyRestroom.png"
-                });
+                }).Wait();
 
             }
 
             if (!dbTableExist("Settings"))
             {
-                _database.CreateTableAsync<Settings>();
+                _database.CreateTableAsync<Settings>().Wait();
                 _database.InsertAsync(new Settings()
                 {
                     GSMNotificationToFriends = true,
@@ -43,7 +43,25 @@ namespace CrashAlarm
                     GSMNotificationToFamily = false,
                     HelpMessage = "Pomoc, ztratil jsem se, Jirka.",
                     LastUpdate = DateTime.Now
-                });
+                }).Wait();
+            }
+            else
+            {
+                if (this.GetCountOfSettingsAsync().Result != 1)
+                {
+                    this._database.DropTableAsync<Settings>().Wait();
+                    this._database.CreateTableAsync<Settings>().Wait();
+                    _database.InsertAsync(new Settings()
+                    {
+                        GSMNotificationToFriends = true,
+                        GSMNotificationToEmergency = true,
+                        GSMNotificationToFamily = false,
+                        HelpMessage = "Pomoc, ztratil jsem se, Jirka.",
+                        LastUpdate = DateTime.Now
+                    }).Wait();
+                }
+
+                
             }
         }
 
@@ -101,6 +119,16 @@ namespace CrashAlarm
         public Task<int> GetCountOfSettingsAsync()
         {
             return _database.Table<Settings>().CountAsync();
+        }
+
+        public Task<int> InsertSettingsAsync(Settings _settings)
+        {
+            return _database.InsertAsync(_settings);
+        }
+
+        public Task<int> DeleteAllSettingsAsync()
+        {
+            return _database.ExecuteAsync("Delete from Contact");
         }
 
         public Task<int> SaveSettingsAsync(Settings _settings)
