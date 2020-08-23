@@ -69,20 +69,20 @@ namespace CrashAlarm
 
         public Task<List<Contact>> GetEmergencyContactsAsync()
         {
-            return _database.Table<Contact>().Where(t=>t.TypeOfContact == "Emergency").ToListAsync();
+            return _database.Table<Contact>().Where(t=>t.TypeOfContact == "localHospital.png").ToListAsync();
         }
         public Task<List<Contact>> GetFriendContactsAsync()
         {
-            return _database.Table<Contact>().Where(t => t.TypeOfContact == "Friend").ToListAsync();
+            return _database.Table<Contact>().Where(t => t.TypeOfContact == "groups.png").ToListAsync();
         }
         public Task<List<Contact>> GetFamilyContactsAsync()
         {
-            return _database.Table<Contact>().Where(t => t.TypeOfContact == "Family").ToListAsync();
+            return _database.Table<Contact>().Where(t => t.TypeOfContact == "familyRestroom.png").ToListAsync();
         }
         
         public Task<List<Contact>> GetNoSpecifiedContactsAsync()
         {
-            return _database.Table<Contact>().Where(t => t.TypeOfContact == "No specific").ToListAsync();
+            return _database.Table<Contact>().Where(t => t.TypeOfContact == "personAdd.png").ToListAsync();
         }
 
         public Task<int> SaveContactAsync(Contact _contact)
