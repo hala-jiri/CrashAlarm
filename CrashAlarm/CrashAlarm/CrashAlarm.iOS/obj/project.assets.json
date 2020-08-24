@@ -105,6 +105,21 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
+      "Plugin.Permissions/6.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Essentials": "1.5.2"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/Plugin.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Plugin.Permissions.dll": {}
+        }
+      },
       "Plugins.Forms.ButtonCircle/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -858,6 +873,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Acr.UserDialogs": "7.1.0.446",
+          "Plugin.Permissions": "6.0.1",
           "Plugins.Forms.ButtonCircle": "2.0.3",
           "Prism.DryIoc.Forms": "7.2.0.1422",
           "Xam.Plugins.Messaging": "5.2.0",
@@ -978,6 +994,21 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
+      "Plugin.Permissions/6.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Essentials": "1.5.2"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/Plugin.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Plugin.Permissions.dll": {}
+        }
+      },
       "Plugins.Forms.ButtonCircle/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -1667,6 +1698,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Acr.UserDialogs": "7.1.0.446",
+          "Plugin.Permissions": "6.0.1",
           "Plugins.Forms.ButtonCircle": "2.0.3",
           "Prism.DryIoc.Forms": "7.2.0.1422",
           "Xam.Plugins.Messaging": "5.2.0",
@@ -1787,6 +1819,21 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
+      "Plugin.Permissions/6.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Essentials": "1.5.2"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/Plugin.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Plugin.Permissions.dll": {}
+        }
+      },
       "Plugins.Forms.ButtonCircle/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -2476,6 +2523,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Acr.UserDialogs": "7.1.0.446",
+          "Plugin.Permissions": "6.0.1",
           "Plugins.Forms.ButtonCircle": "2.0.3",
           "Prism.DryIoc.Forms": "7.2.0.1422",
           "Xam.Plugins.Messaging": "5.2.0",
@@ -2596,6 +2644,21 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
+      "Plugin.Permissions/6.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Essentials": "1.5.2"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/Plugin.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Plugin.Permissions.dll": {}
+        }
+      },
       "Plugins.Forms.ButtonCircle/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -3285,6 +3348,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Acr.UserDialogs": "7.1.0.446",
+          "Plugin.Permissions": "6.0.1",
           "Plugins.Forms.ButtonCircle": "2.0.3",
           "Prism.DryIoc.Forms": "7.2.0.1422",
           "Xam.Plugins.Messaging": "5.2.0",
@@ -3452,6 +3516,37 @@
         "dotnet_library_license.txt",
         "netstandard.library.1.6.1.nupkg.sha512",
         "netstandard.library.nuspec"
+      ]
+    },
+    "Plugin.Permissions/6.0.1": {
+      "sha512": "na/0FNhyKmSicANWZMLSM0y/FW2AvLoawX3lsvBpELwP15sdJRyuBhRKk1OQjRoNrmTIewcON1tJFyydjMGWcA==",
+      "type": "package",
+      "path": "plugin.permissions/6.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid10.0/Plugin.Permissions.dll",
+        "lib/monoandroid10.0/Plugin.Permissions.pdb",
+        "lib/monoandroid80/Plugin.Permissions.dll",
+        "lib/monoandroid80/Plugin.Permissions.pdb",
+        "lib/monoandroid81/Plugin.Permissions.dll",
+        "lib/monoandroid81/Plugin.Permissions.pdb",
+        "lib/monoandroid90/Plugin.Permissions.dll",
+        "lib/monoandroid90/Plugin.Permissions.pdb",
+        "lib/netstandard1.0/Plugin.Permissions.dll",
+        "lib/netstandard1.0/Plugin.Permissions.pdb",
+        "lib/netstandard2.0/Plugin.Permissions.dll",
+        "lib/netstandard2.0/Plugin.Permissions.pdb",
+        "lib/uap10.0.16299/Plugin.Permissions.dll",
+        "lib/uap10.0.16299/Plugin.Permissions.pdb",
+        "lib/uap10.0.16299/Plugin.Permissions.pri",
+        "lib/xamarinios10/Plugin.Permissions.dll",
+        "lib/xamarinios10/Plugin.Permissions.pdb",
+        "lib/xamarintvos10/Plugin.Permissions.dll",
+        "lib/xamarintvos10/Plugin.Permissions.pdb",
+        "plugin.permissions.6.0.1.nupkg.sha512",
+        "plugin.permissions.nuspec",
+        "readme.txt"
       ]
     },
     "Plugins.Forms.ButtonCircle/2.0.3": {
@@ -6754,6 +6849,7 @@
     "Xamarin.iOS,Version=v1.0": [
       "Acr.UserDialogs >= 7.1.0.446",
       "CrashAlarm >= 1.0.0",
+      "Plugin.Permissions >= 6.0.1",
       "Prism.DryIoc.Forms >= 7.2.0.1422",
       "Xam.Plugins.Messaging >= 5.2.0",
       "Xamarin.Essentials >= 1.5.3.2",
@@ -6807,6 +6903,10 @@
           "Acr.UserDialogs": {
             "target": "Package",
             "version": "[7.1.0.446, )"
+          },
+          "Plugin.Permissions": {
+            "target": "Package",
+            "version": "[6.0.1, )"
           },
           "Prism.DryIoc.Forms": {
             "target": "Package",

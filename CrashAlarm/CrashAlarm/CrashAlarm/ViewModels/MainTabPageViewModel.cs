@@ -124,6 +124,12 @@ namespace CrashAlarm.ViewModels
         }
         private async Task CallForHelp()
         {
+            PermissionService _permissionService = new PermissionService();
+            
+            var stat = _permissionService.CheckAndRequestSMSPermission();
+            if (stat.Result != PermissionStatus.Granted)
+                return;
+
             if (_location != null)
             {
                 var setting = App.DbRepository.GetSettingsAsync().Result;
@@ -150,9 +156,9 @@ namespace CrashAlarm.ViewModels
                 }
 
                 contactNumbers.AddRange(contactList.Select(x => x.ContactNumber));
-
+                string googleMapsUrlLink = $"https://www.google.com/maps/search/?api=1&query={Latitude},{Longitude}";
                 string messageToSend =
-                    setting.HelpMessage + $" My Location (Lon: {_location.Longitude}, Lat: {_location.Latitude})";
+                    setting.HelpMessage + $" My Location (Lon: {_location.Longitude}, Lat: {_location.Latitude}), {googleMapsUrlLink}";
 
                 await SendSms(messageToSend, contactNumbers.ToArray());
 
