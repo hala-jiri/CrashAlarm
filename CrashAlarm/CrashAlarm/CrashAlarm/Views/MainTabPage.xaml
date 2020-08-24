@@ -16,6 +16,7 @@
             <RowDefinition Height="30" />
             <RowDefinition Height="30" />
             <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5*" />
@@ -42,5 +43,10 @@
             <Label x:Name="longLabel" Text="{Binding Longitude}"/>
         </StackLayout>
 
+        <Label TextColor="Blue" Text="{x:Static resources:AppResource.MapButtonTitle}" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" HorizontalOptions="Center">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding OpenMapCommand}" CommandParameter="{Binding GoogleMapsLink}"/>
+            </Label.GestureRecognizers>
+        </Label>
     </Grid>
 </ContentPage>

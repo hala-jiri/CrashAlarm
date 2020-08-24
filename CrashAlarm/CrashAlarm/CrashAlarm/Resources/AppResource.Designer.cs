@@ -205,6 +205,15 @@ namespace CrashAlarm.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string MapButtonTitle {
+            get {
+                return ResourceManager.GetString("MapButtonTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to My position.
         /// </summary>
         internal static string MyPositionString {

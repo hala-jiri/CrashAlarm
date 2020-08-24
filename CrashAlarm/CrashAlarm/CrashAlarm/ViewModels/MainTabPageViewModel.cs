@@ -21,15 +21,25 @@ namespace CrashAlarm.ViewModels
         private Location _location;
         private string _longitude;
         private string _latitude;
+        private string _googleMapsLink;
         private int _numberOfContacts;
 
         public MainTabPageViewModel()
         {
+            GoogleMapsLink = "";
             getLocationAsync();
             SendSMSCommand = new Command(async () => await CallForHelp());
 
         }
-
+        public string GoogleMapsLink
+        {
+            get => _googleMapsLink;
+            set
+            {
+                _googleMapsLink = value;
+                RaisePropertyChanged(nameof(GoogleMapsLink));
+            }
+        }
         public string Longitude
         {
             get => _longitude;
@@ -70,6 +80,7 @@ namespace CrashAlarm.ViewModels
                     Longitude = _location.Longitude.ToString();
                     Latitude = _location.Latitude.ToString();
 
+                    GoogleMapsLink =  $"https://www.google.com/maps/search/?api=1&query={Latitude},{Longitude}";
                     Console.WriteLine($"Latitude: {_location.Latitude}, Longitude: {_location.Longitude}, Altitude: {_location.Altitude}");
                 }
             }
@@ -156,9 +167,9 @@ namespace CrashAlarm.ViewModels
                 }
 
                 contactNumbers.AddRange(contactList.Select(x => x.ContactNumber));
-                string googleMapsUrlLink = $"https://www.google.com/maps/search/?api=1&query={Latitude},{Longitude}";
+                
                 string messageToSend =
-                    setting.HelpMessage + $" My Location (Lon: {_location.Longitude}, Lat: {_location.Latitude}), {googleMapsUrlLink}";
+                    setting.HelpMessage + $" My Location (Lon: {_location.Longitude}, Lat: {_location.Latitude}), {GoogleMapsLink}";
 
                 await SendSms(messageToSend, contactNumbers.ToArray());
 
@@ -173,5 +184,18 @@ namespace CrashAlarm.ViewModels
             }
         }
 
+        public ICommand OpenMapCommand => new Command<string>(async (url) =>
+        {
+            try
+            {
+                if (!string.IsNullOrEmpty(url))
+                        await Browser.OpenAsync(new Uri(url), BrowserLaunchMode.SystemPreferred);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Prolem with open URL");
+            }
+
+        });
     }
 }

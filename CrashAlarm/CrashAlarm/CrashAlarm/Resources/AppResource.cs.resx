@@ -170,4 +170,7 @@
   <data name="WelcomeMessageSecondLineOnMainPage" xml:space="preserve">
     <value>Založeném na Xamarin Forms a Prism</value>
   </data>
+  <data name="MapButtonTitle" xml:space="preserve">
+    <value>Otevřít mapu</value>
+  </data>
 </root>

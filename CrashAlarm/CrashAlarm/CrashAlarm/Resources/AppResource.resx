@@ -192,4 +192,7 @@
   <data name="ToastSendMessage" xml:space="preserve">
     <value>Messages were send. Number of messages: </value>
   </data>
+  <data name="MapButtonTitle" xml:space="preserve">
+    <value>Open map</value>
+  </data>
 </root>
