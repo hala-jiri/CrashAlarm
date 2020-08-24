@@ -3,6 +3,7 @@ AndHUD
 ButtonCircle.FormsPlugin.Android
 FormsViewGroup
 Plugin.Messaging
+Plugin.Permissions
 Prism.Forms
 SQLitePCLRaw.lib.e_sqlite3.android
 Xamarin.AndroidX.Activity

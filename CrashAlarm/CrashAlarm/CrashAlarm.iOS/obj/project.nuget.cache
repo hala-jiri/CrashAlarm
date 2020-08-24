@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "crupQOdADoOVI0EU9ZhGIUuGAltDiogapf8trm7JpV+wMWyXppxGMSqaUdCseN7zKoL35zFpuarJc5dqaxPl5Q==",
+  "dgSpecHash": "57ukIQk3QoMI1ibZNE/0Z+huq2dCt1AGcsaxU6QhTGhmmGv+lFZ/JaoXPbzPIG4AbFULvwRGPP7EhD7/BXl+cg==",
   "success": true,
   "projectFilePath": "C:\\Git\\UHK\\CrashAlarm\\CrashAlarm\\CrashAlarm\\CrashAlarm.iOS\\CrashAlarm.iOS.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\jhala\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\jhala\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\jhala\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
+    "C:\\Users\\jhala\\.nuget\\packages\\plugin.permissions\\6.0.1\\plugin.permissions.6.0.1.nupkg.sha512",
     "C:\\Users\\jhala\\.nuget\\packages\\plugins.forms.buttoncircle\\2.0.3\\plugins.forms.buttoncircle.2.0.3.nupkg.sha512",
     "C:\\Users\\jhala\\.nuget\\packages\\prism.core\\7.2.0.1422\\prism.core.7.2.0.1422.nupkg.sha512",
     "C:\\Users\\jhala\\.nuget\\packages\\prism.dryioc.forms\\7.2.0.1422\\prism.dryioc.forms.7.2.0.1422.nupkg.sha512",
