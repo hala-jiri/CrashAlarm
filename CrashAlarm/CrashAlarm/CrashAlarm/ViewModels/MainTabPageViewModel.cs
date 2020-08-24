@@ -16,6 +16,7 @@ using Color = System.Drawing.Color;
 using Mailjet.Client;
 using Mailjet.Client.Resources;
 using Newtonsoft.Json.Linq;
+using Prism.AppModel;
 
 namespace CrashAlarm.ViewModels
 {
@@ -171,16 +172,27 @@ namespace CrashAlarm.ViewModels
 
                 contactNumbers.AddRange(contactList.Select(x => x.ContactNumber));
                 
-                string messageToSend =
-                    setting.HelpMessage + $" My Location (Lon: {_location.Longitude}, Lat: {_location.Latitude}), {GoogleMapsLink}";
-
-                await SendSms(messageToSend, contactNumbers.ToArray());
+                string messageToSend = setting.HelpMessage + $" My Location (Lon: {_location.Longitude}, Lat: {_location.Latitude}), {GoogleMapsLink}";
+                if(Device.RuntimePlatform == RuntimePlatform.UWP.ToString())
+                {
+                    // hlaska ze nejde poslat
+                    UserDialogs.Instance.Toast("nejdou poslat", TimeSpan.FromSeconds(5));
+                }
+                else
+                {
+                    await SendSms(messageToSend, contactNumbers.ToArray());
+                    string toastMessage = "Your messages were send, number of messages: " + contactNumbers.Count.ToString();
+                    UserDialogs.Instance.Toast(toastMessage, TimeSpan.FromSeconds(5));
+                }
 
                 await SendTestEmail();
 
                 //var kuku = AppResource.ToastSendMessage;
-                string toastMessage = "Your messages were send, number of messages: " + contactNumbers.Count.ToString();
-                 UserDialogs.Instance.Toast(toastMessage, TimeSpan.FromSeconds(5));
+                
+                
+                //AppResource.Longitude
+                
+                
                 //UserDialogs.Instance.Toast("Text", TimeSpan.FromSeconds(3));
                 //UserDialogs.Instance.Toast(new ToastConfig("text") {BackgroundColor = Color.Pink});
 
@@ -211,7 +223,7 @@ namespace CrashAlarm.ViewModels
         {
             try
             {
-                MailjetClient client = new MailjetClient(Environment.GetEnvironmentVariable("73f02d38e2aa5a178e4d23872938747d"), Environment.GetEnvironmentVariable("578abcbb2700e8081784749af4cd8302"))
+                MailjetClient client = new MailjetClient("73f02d38e2aa5a178e4d23872938747d", "578abcbb2700e8081784749af4cd8302")
                 {
                     Version = ApiVersion.V3_1,
                 };
