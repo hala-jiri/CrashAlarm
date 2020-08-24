@@ -195,4 +195,25 @@
   <data name="MapButtonTitle" xml:space="preserve">
     <value>Open map</value>
   </data>
+  <data name="SmsWarningForUWP" xml:space="preserve">
+    <value>We are sorry, but on UWP platform we are not able to send SMS message.</value>
+  </data>
+  <data name="SmsMessagesSentToast" xml:space="preserve">
+    <value>Your messages were send, number of messages:</value>
+  </data>
+  <data name="EmailSentToast" xml:space="preserve">
+    <value>Sent email about your situation to admin.</value>
+  </data>
+  <data name="MyLocationMessagePart" xml:space="preserve">
+    <value>My location</value>
+  </data>
+  <data name="NoActivateContacts" xml:space="preserve">
+    <value>You dont have any contacts available.</value>
+  </data>
+  <data name="ProblemWithOpeningUrl" xml:space="preserve">
+    <value>Problem with open URL</value>
+  </data>
+  <data name="EmailSendProblemToast" xml:space="preserve">
+    <value>Problem with sending your email.</value>
+  </data>
 </root>

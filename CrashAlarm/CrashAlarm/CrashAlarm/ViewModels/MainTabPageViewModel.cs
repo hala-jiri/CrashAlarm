@@ -166,33 +166,34 @@ namespace CrashAlarm.ViewModels
 
                 if (NumberOfContacts == 0)
                 {
-                    UserDialogs.Instance.Toast("You dont have any contacts available.", TimeSpan.FromSeconds(5));
+                    UserDialogs.Instance.Toast(AppResource.NoActivateContacts, TimeSpan.FromSeconds(5));
                     return;
                 }
 
                 contactNumbers.AddRange(contactList.Select(x => x.ContactNumber));
                 
-                string messageToSend = setting.HelpMessage + $" My Location (Lon: {_location.Longitude}, Lat: {_location.Latitude}), {GoogleMapsLink}";
+                string messageToSend = setting.HelpMessage + AppResource.MyLocationMessagePart + $"(Lon: {_location.Longitude}, Lat: {_location.Latitude}), {GoogleMapsLink}";
                 if(Device.RuntimePlatform == RuntimePlatform.UWP.ToString())
                 {
                     // hlaska ze nejde poslat
-                    UserDialogs.Instance.Toast("nejdou poslat", TimeSpan.FromSeconds(5));
+                    UserDialogs.Instance.Toast(AppResource.SmsWarningForUWP, TimeSpan.FromSeconds(5));
                 }
                 else
                 {
                     await SendSms(messageToSend, contactNumbers.ToArray());
-                    string toastMessage = "Your messages were send, number of messages: " + contactNumbers.Count.ToString();
+                    string toastMessage = AppResource.SmsMessagesSentToast +" " + contactNumbers.Count.ToString();
                     UserDialogs.Instance.Toast(toastMessage, TimeSpan.FromSeconds(5));
                 }
-
+                
                 await SendTestEmail();
+               
 
                 //var kuku = AppResource.ToastSendMessage;
-                
-                
+
+
                 //AppResource.Longitude
-                
-                
+
+
                 //UserDialogs.Instance.Toast("Text", TimeSpan.FromSeconds(3));
                 //UserDialogs.Instance.Toast(new ToastConfig("text") {BackgroundColor = Color.Pink});
 
@@ -212,14 +213,14 @@ namespace CrashAlarm.ViewModels
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Prolem with open URL");
+                UserDialogs.Instance.Toast(AppResource.ProblemWithOpeningUrl, TimeSpan.FromSeconds(3));
             }
 
         });
 
 
 
-        static async Task SendTestEmail()
+        public async Task SendTestEmail()
         {
             try
             {
@@ -251,13 +252,13 @@ namespace CrashAlarm.ViewModels
                             }
                         }, {
                             "Subject",
-                            "Greetings from Mailjet."
+                            "CrashAlarm App - Alert!"
                         }, {
                             "TextPart",
-                            "My first Mailjet email"
+                            "CrashAlarm App - Alert!"
                         }, {
                             "HTMLPart",
-                            "<h3>Dear passenger 1, welcome to <a href='https://www.mailjet.com/'>Mailjet</a>!</h3><br />May the delivery force be with you!"
+                            $"<h3> Ztracený uživatel! <a href= '{GoogleMapsLink}'>Mapa</a>!</h3><br />Prosím, kontaktujte nejbližší záchrané složky!"
                         }, {
                             "CustomID",
                             "AppGettingStartedTest"
@@ -266,22 +267,13 @@ namespace CrashAlarm.ViewModels
                     });
                 MailjetResponse response = await client.PostAsync(request);
                 if (response.IsSuccessStatusCode)
-                {
-                    Console.WriteLine(string.Format("Total: {0}, Count: {1}\n", response.GetTotal(), response.GetCount()));
-                    Console.WriteLine(response.GetData());
-                }
+                    UserDialogs.Instance.Toast(AppResource.EmailSentToast, TimeSpan.FromSeconds(5));
                 else
-                {
-                    Console.WriteLine(string.Format("StatusCode: {0}\n", response.StatusCode));
-                    Console.WriteLine(string.Format("ErrorInfo: {0}\n", response.GetErrorInfo()));
-                    Console.WriteLine(response.GetData());
-                    Console.WriteLine(string.Format("ErrorMessage: {0}\n", response.GetErrorMessage()));
-                }
+                    UserDialogs.Instance.Toast(AppResource.EmailSendProblemToast, TimeSpan.FromSeconds(5));
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                UserDialogs.Instance.Toast(AppResource.EmailSendProblemToast, TimeSpan.FromSeconds(5));
             }
             
         }

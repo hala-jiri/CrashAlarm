@@ -115,6 +115,24 @@ namespace CrashAlarm.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string EmailSendProblemToast {
+            get {
+                return ResourceManager.GetString("EmailSendProblemToast", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sent email about your situation to admin..
+        /// </summary>
+        internal static string EmailSentToast {
+            get {
+                return ResourceManager.GetString("EmailSentToast", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enter contact number.
         /// </summary>
         internal static string EnterContactNumberTitle {
@@ -205,11 +223,20 @@ namespace CrashAlarm.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Open map.
         /// </summary>
         internal static string MapButtonTitle {
             get {
                 return ResourceManager.GetString("MapButtonTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to My location.
+        /// </summary>
+        internal static string MyLocationMessagePart {
+            get {
+                return ResourceManager.GetString("MyLocationMessagePart", resourceCulture);
             }
         }
         
@@ -223,11 +250,47 @@ namespace CrashAlarm.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You dont have any contacts available..
+        /// </summary>
+        internal static string NoActivateContacts {
+            get {
+                return ResourceManager.GetString("NoActivateContacts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Problem with open URL.
+        /// </summary>
+        internal static string ProblemWithOpeningUrl {
+            get {
+                return ResourceManager.GetString("ProblemWithOpeningUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Settings.
         /// </summary>
         internal static string SettingsTabTitle {
             get {
                 return ResourceManager.GetString("SettingsTabTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your messages were send, number of messages:.
+        /// </summary>
+        internal static string SmsMessagesSentToast {
+            get {
+                return ResourceManager.GetString("SmsMessagesSentToast", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to We are sorry, but on UWP platform we are not able to send SMS message..
+        /// </summary>
+        internal static string SmsWarningForUWP {
+            get {
+                return ResourceManager.GetString("SmsWarningForUWP", resourceCulture);
             }
         }
         

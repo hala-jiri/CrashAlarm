@@ -173,4 +173,25 @@
   <data name="MapButtonTitle" xml:space="preserve">
     <value>Otevřít mapu</value>
   </data>
+  <data name="SmsWarningForUWP" xml:space="preserve">
+    <value>Omlouváme se, ale UWP platformě nejsme schopni odeslat SMS zprávy.</value>
+  </data>
+  <data name="SmsMessagesSentToast" xml:space="preserve">
+    <value>Vaše zprávy byly odeslány, počet odeslaných zpráv:</value>
+  </data>
+  <data name="EmailSentToast" xml:space="preserve">
+    <value>Email s vaší situací odeslán adminovi.</value>
+  </data>
+  <data name="MyLocationMessagePart" xml:space="preserve">
+    <value>Má lokace</value>
+  </data>
+  <data name="NoActivateContacts" xml:space="preserve">
+    <value>Nemáte žádné dostupné kontakty.</value>
+  </data>
+  <data name="ProblemWithOpeningUrl" xml:space="preserve">
+    <value>Problém s otevíráním stránky.</value>
+  </data>
+  <data name="EmailSendProblemToast" xml:space="preserve">
+    <value>Problém s odesíláním emailu.</value>
+  </data>
 </root>
