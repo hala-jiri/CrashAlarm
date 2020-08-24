@@ -11,6 +11,8 @@ Project for subject **Introduction to Mobile Technologies**.
 * Reason = help people when they are „lost“.
 * By click on one button – send all your prefilled contacts a message with precise location.
 
+![Demo view](https://github.com/hala-jiri/CrashAlarm/blob/master/CrashAlarmDemoView.png)
+
 This application should help people get localized when they are lost somewhere, for example in the forest.
 This can happen to seniors or even to our kids.
 In this time almost everyone has some kind of a smart phone. Using it to vocally explain to someone where their position is can be very hard.
