@@ -13,6 +13,9 @@ using Plugin.Messaging;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Color = System.Drawing.Color;
+using Mailjet.Client;
+using Mailjet.Client.Resources;
+using Newtonsoft.Json.Linq;
 
 namespace CrashAlarm.ViewModels
 {
@@ -145,7 +148,7 @@ namespace CrashAlarm.ViewModels
             {
                 var setting = App.DbRepository.GetSettingsAsync().Result;
 
-                List<Contact> contactList = new List<Contact>();
+                List<Models.Contact> contactList = new List<Models.Contact>();
                 List<string> contactNumbers = new List<string>();
 
 
@@ -173,6 +176,8 @@ namespace CrashAlarm.ViewModels
 
                 await SendSms(messageToSend, contactNumbers.ToArray());
 
+                await SendTestEmail();
+
                 //var kuku = AppResource.ToastSendMessage;
                 string toastMessage = "Your messages were send, number of messages: " + contactNumbers.Count.ToString();
                  UserDialogs.Instance.Toast(toastMessage, TimeSpan.FromSeconds(5));
@@ -183,6 +188,8 @@ namespace CrashAlarm.ViewModels
 
             }
         }
+
+
 
         public ICommand OpenMapCommand => new Command<string>(async (url) =>
         {
@@ -197,5 +204,76 @@ namespace CrashAlarm.ViewModels
             }
 
         });
+
+
+
+        static async Task SendTestEmail()
+        {
+            try
+            {
+                MailjetClient client = new MailjetClient(Environment.GetEnvironmentVariable("73f02d38e2aa5a178e4d23872938747d"), Environment.GetEnvironmentVariable("578abcbb2700e8081784749af4cd8302"))
+                {
+                    Version = ApiVersion.V3_1,
+                };
+                MailjetRequest request = new MailjetRequest { Resource = Send.Resource, }
+                    .Property(Send.Messages, new JArray {
+                    new JObject {
+                        {
+                            "From",
+                            new JObject {
+                                {"Email", "hala.jiri@gmail.com"},
+                                {"Name", "Jiri"}
+                            }
+                        }, {
+                            "To",
+                            new JArray {
+                                new JObject {
+                                    {
+                                        "Email",
+                                        "hala.jiri@gmail.com"
+                                    }, {
+                                        "Name",
+                                        "Jiri"
+                                    }
+                                }
+                            }
+                        }, {
+                            "Subject",
+                            "Greetings from Mailjet."
+                        }, {
+                            "TextPart",
+                            "My first Mailjet email"
+                        }, {
+                            "HTMLPart",
+                            "<h3>Dear passenger 1, welcome to <a href='https://www.mailjet.com/'>Mailjet</a>!</h3><br />May the delivery force be with you!"
+                        }, {
+                            "CustomID",
+                            "AppGettingStartedTest"
+                        }
+                    }
+                    });
+                MailjetResponse response = await client.PostAsync(request);
+                if (response.IsSuccessStatusCode)
+                {
+                    Console.WriteLine(string.Format("Total: {0}, Count: {1}\n", response.GetTotal(), response.GetCount()));
+                    Console.WriteLine(response.GetData());
+                }
+                else
+                {
+                    Console.WriteLine(string.Format("StatusCode: {0}\n", response.StatusCode));
+                    Console.WriteLine(string.Format("ErrorInfo: {0}\n", response.GetErrorInfo()));
+                    Console.WriteLine(response.GetData());
+                    Console.WriteLine(string.Format("ErrorMessage: {0}\n", response.GetErrorMessage()));
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+            
+        }
+
+
     }
 }
