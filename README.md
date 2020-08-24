@@ -51,3 +51,12 @@ The project cointains few nuget plugins such as UserDialogs for Toast messages, 
 There is always a room for improvment and in our application this can be easily achieved by solving for example the issue of not showing the map in the application together with location.
 
 Or you can also integrate a phone contact list into the application so that the user doesnt need to add contacts manually.
+
+
+Issues
+
+Issue 1: During first instalation on Android and grand permission for SMS sent, application freeze. During second run is application running already well. Issue is described on https://github.com/xamarin/XamarinComponents/issues/801 
+
+Issue 2: On platform UWP doesnt work sending SMS. In that case we can use service from MailJet which provide even SMS service over REST API. This service is paid, so in our case is not used. https://docs.microsoft.com/cs-cz/xamarin/essentials/permissions?tabs=android#available-permissions 
+
+Issue 3: I am not owner of iOS. I am not able to debug this project for platform iOS.
