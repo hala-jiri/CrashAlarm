@@ -1,8 +1,8 @@
 # CrashAlarm
 
-Project for subject Introduction to Mobile Technologies.
+Project for subject **Introduction to Mobile Technologies**.
 
-Jiří Hála, hala.jiri@gmail.com, 2020
+**Jiří Hála**, hala.jiri@gmail.com, 2020
 
 
 
