@@ -4,6 +4,8 @@ Project for subject **Introduction to Mobile Technologies**.
 
 **Jiří Hála**, hala.jiri@gmail.com, 2020
 
+Url for Video presentaion:
+https://www.dropbox.com/s/n50blhvjb7l6uhg/UMTE_H%C3%A1la_Presentation_demo.mpg
 
 
 ## About Application
